@@ -1,0 +1,36 @@
+::-webkit-selection {
+  background: rgba(18, 52, 86, 0.5);
+  color: white;
+  text-shadow: none; }
+
+::-moz-selection {
+  background: rgba(18, 52, 86, 0.5);
+  color: white;
+  text-shadow: none; }
+
+::-o-selection {
+  background: rgba(18, 52, 86, 0.5);
+  color: white;
+  text-shadow: none; }
+
+::-ms-selection {
+  background: rgba(18, 52, 86, 0.5);
+  color: white;
+  text-shadow: none; }
+
+::selection {
+  background: rgba(18, 52, 86, 0.5);
+  color: white;
+  text-shadow: none; }
+
+img::selection {
+  background: transparent; }
+
+img::-moz-selection {
+  background: transparent; }
+
+body {
+  -webkit-tap-highlight-color: rgba(18, 52, 86, 0.5); }
+
+a::selection {
+  color: #123456; }
