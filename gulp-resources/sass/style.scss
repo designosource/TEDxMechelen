@@ -1,11 +1,399 @@
 @import "components/_colors.scss";
 @import "components/_measures.scss";
+@import "components/_buttons.scss";
 
 // IMPLEMENT SASS
 
 body{
+    color: $color--black;
+    font-family: Helvetica, sans-serif;
+    //overflow-x: hidden;
+    
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .maxwidth {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .bg-img {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .all-caps {
+        text-transform: uppercase;
+    }
+}
+
+#information {
+    background-color: $color--black;
+    padding: $padding-s;
+    
+    .flex {
+        justify-content: space-between;
+        align-items: center;
+        
+        p {
+            color: $color--white;
+            font-size: $text;
+            margin-bottom: 0;
+        }
+
+        .information--socials {
+
+            a {
+                margin-left: 10px;
+                padding:0;
+                img {
+                    margin-top: 4px;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+}
+
+nav {
+    background-color: $color--white;
+    padding: $padding-s $padding;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 60px; // want logo is 40px hoog en padding-t en b is 10px
+    
+    #logo {
+        height: 40px;
+        width: auto;
+    }
+    
+    .hamburger-menu-container {
+        .hamburger-menu {
+            position: relative;
+            display: block;
+            width: 26px;
+            height: 24px;
+            cursor: pointer;
+            z-index: 10;
+            
+            span {
+                position: absolute;
+                display: block;
+                width: 20px;
+                height: 2px;
+                right: 0;
+                background-color: $color--black;
+                transition: 0.2s;
+                
+                &:nth-child(1) {
+                    top: calc(0% + 3px);
+                }
+                
+                &:nth-child(2) {
+                    width: 26px;
+                    top: calc(50% - 1px);
+                }
+                
+                &:nth-child(3) {
+                    top: calc(100% - 5px);
+                }
+            }
+            &:hover {
+                span {
+                    width: 23px;
+                    transition: 0.2s;
+                }
+            }
+        }
+        .open {
+            &:hover {
+                span {
+                    width: 20px;
+                }
+            }
+            span {
+                transition: 0.2s;
+                transform-origin: left center;
+                
+                &:nth-child(1) {
+                    transform: rotate(-45deg) translateX(-11px) translateY(11px);
+                }
+                
+                &:nth-child(2) {
+                    width: 0;
+                }
+                
+                &:nth-child(3) {
+                    transform: rotate(45deg) translateX(-10px) translateY(-11px);
+                }
+            }
+        }
+    }
+    
+    .navigation {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        position: absolute;
+        z-index: 2;
+        top: 80px;
+        left: 0;
+        background-color: $color--gray;
+        
+        li {
+            width: calc(100vw - #{$padding});
+            padding: $padding;
+            
+            a {
+                color: $color--link;
+                padding: $padding;
+                clear: both;
+                transition: 0.5s;
+                
+                &:hover {
+                    color: red;
+                    transition: 0.5s;
+                }
+            }
+            ul {
+                
+            }
+        }
+        
+    }
+}
+
+header {
+    background-color: red;
+    background-image: url('../img/header.png');
+    
+    .flex {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    
+        #jumbotron {
+            background-image: url('../img/red_x.svg'); // Rode X
+            padding: 40px 0;
+            width: 80%;
+            max-width: 800%;
+            margin: 100px auto;
+            color: $color--white;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            .flex {
+                flex-direction: column;
+            }
+
+
+            h1 {
+                font-family: "Helvetica";
+                font-size: 50px;
+            }
+
+            h2 {
+                font-family: "Helvetica";
+                font-size: 20px;
+                margin-top: $margin-l;
+                position: relative;
+                font-weight: bold;
+            }
+            
+            .h2--underline {
+                &:after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 100px;
+                    height: 2px;
+                    background-color: $color--white;
+                    bottom: -20px;
+                    left: calc(50% - 50px);
+                }
+            }
+
+        }
+    }
     
 }
+
+section {
+    padding: $padding-xl $padding;
+    
+    p {
+        max-width: 500px;
+        margin-bottom: $margin;
+    }
+    
+    h3 {
+        display: inline-block;
+        font-family: "Helvetica";
+        font-size: 16px;
+        position: relative;
+        margin-bottom: $margin;
+        font-weight: bold; 
+    }
+    
+    .title--line {
+        &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            left: 0;
+            top: -20px;
+            width: 50px;
+            height: 2px;
+            background-color: $color--red;
+        }
+    }
+    
+    form {
+        height: 50px;
+        
+        input[type="email"]{
+            font-size: $text;
+            padding: 7px 10px;
+            width: 150px;
+            height: 30px;
+        }
+
+        input[type="submit"]{
+            font-size: $text;
+            padding: 7px $padding;
+            height: 50px;
+            margin-top: 0;
+            margin-left: 30px;
+            cursor: pointer;
+        }
+    }
+    
+    .carousel {
+        margin-top: $margin;
+        
+        .carousel-item {
+            width: 80%;
+            max-width: 500px;
+            margin: 0 auto;
+            //background-color: red;
+            text-align: center;
+            
+            .bg-img-x {
+                background-image: url('../img/red_x.svg');
+                height: 300px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                img {
+                    display: block;
+                    width: auto;
+                    height: auto;
+                    max-height: 200px;
+                    margin: auto;
+                }
+            }
+            
+            a {
+                font-weight: bold;
+            }
+            
+            .carousel-item-speaker {
+                margin-bottom: $margin;
+                
+                .quote {
+                    color: $color--gray;
+                }
+                
+                .role {
+                    font-weight: bold;
+                    color: $color--black;
+                }
+            }
+        }
+    }
+    
+    .meetspeakers {
+        display: inline-block;
+        margin: 10px auto;
+        text-align: center;
+    }
+    
+    .link--red {
+        color: $color--red;
+        font-weight: bold;
+    }
+    
+}
+
+#subscribe {
+    background-image: url('../img/subscribe-bg.png');
+    background-repeat: repeat;
+    background-size: 50% 50%;
+    background-color: red;
+    color: white;
+    padding-top: 30px;
+    
+    h3{
+        margin-bottom: 10px;        
+    }
+}
+
+footer {
+    background-color: $color--gray;
+    
+    div.flex {
+        flex-direction: column;
+        
+        div {
+            
+            #footerlogo {
+                display: block;
+                width: 70%;
+                height: auto;
+                margin: $margin-l auto;
+            }
+            
+            ul {
+                padding: $padding;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                
+                li {
+                    flex-basis: 50%;
+                    text-align: center;
+                    
+                    a {
+                        width: 100%;
+                        padding: $padding 20px;
+                    }
+                }
+            }
+            
+        }
+        
+        
+    }
+    
+}
+
+
+
+
 
 // END IMPLEMENTING SASS
 

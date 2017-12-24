@@ -39,7 +39,7 @@ gulp.task('css-prefix', function () {
 });
 
 /* IMAGE COMPRESS */
-gulp.task('images', ['imagesDefault'], function(){
+gulp.task('images', ['imagesDefault', 'imagesHosts'], function(){
     gutil.log(gutil.colors.red('Compressing images'));
 });
 
@@ -49,6 +49,14 @@ gulp.task('imagesDefault', () =>
         .pipe(imagemin())
         .pipe(plumber.stop())
         .pipe(gulp.dest('img/'))
+);
+
+gulp.task('imagesHosts', () =>
+    gulp.src('gulp-resources/img/hosts/*')
+        .pipe(plumber())
+        .pipe(imagemin())
+        .pipe(plumber.stop())
+        .pipe(gulp.dest('img/hosts'))
 );
 
 /* COMPRESS JS */

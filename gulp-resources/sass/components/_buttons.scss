@@ -1,0 +1,35 @@
+// BUTTONS
+
+.btn {
+    display: block;
+    background-color: transparent;
+    transition: 0.5s;
+    padding: $padding-xs $padding-s;
+    margin: $margin-s;
+    font-weight: bold;
+    
+}
+
+.btn-s {
+    color: $color--white;
+    background-color: $color--black;
+    border: 0;
+    padding: 10px;
+    display: inline-block;
+}
+
+.btn-regular {
+    color: white;
+    background-color: $color--red;
+    padding: $padding;
+    margin: $margin auto;
+    display: inline-block;
+    //width: auto;
+    
+}
+
+.btn-l {
+    padding: $padding;
+    border: 2px solid white;
+    box-sizing: border-box;
+}
