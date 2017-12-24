@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .btn {
   display: block;
   background-color: transparent;
@@ -326,6 +327,8 @@ footer {
           width: 100%;
           padding: 20px 20px; }
 
+=======
+>>>>>>> bd7179336cc21deae2faff6609b9dbd39ea12dae
 ::-webkit-selection {
   background: rgba(18, 52, 86, 0.5);
   color: white;
@@ -351,9 +354,12 @@ footer {
   color: white;
   text-shadow: none; }
 
+<<<<<<< HEAD
 img::-moz-selection {
   background: transparent; }
 
+=======
+>>>>>>> bd7179336cc21deae2faff6609b9dbd39ea12dae
 img::selection {
   background: transparent; }
 
@@ -363,8 +369,11 @@ img::-moz-selection {
 body {
   -webkit-tap-highlight-color: rgba(18, 52, 86, 0.5); }
 
+<<<<<<< HEAD
 a::-moz-selection {
   color: #123456; }
 
+=======
+>>>>>>> bd7179336cc21deae2faff6609b9dbd39ea12dae
 a::selection {
   color: #123456; }

@@ -1,4 +1,5 @@
 $(document).ready(function(){
+<<<<<<< HEAD
     
     // scroll naar de div die in de link staat, indien deze naar dezelfde verwijst
     $(function() { 
@@ -70,4 +71,9 @@ $(document).ready(function(){
 
     
     
+=======
+
+    alert('TEDx Mechelen');
+
+>>>>>>> bd7179336cc21deae2faff6609b9dbd39ea12dae
 });
