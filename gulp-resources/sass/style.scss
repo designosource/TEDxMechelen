@@ -47,9 +47,16 @@ body{
             color: $color--white;
             font-size: $text;
             margin-bottom: 0;
+            //padding-right: $padding;
+            box-sizing: border-box;
+            flex-basis: 80%;
         }
 
         .information--socials {
+            flex-basis: 20%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
 
             a {
                 margin-left: 10px;
@@ -64,113 +71,182 @@ body{
     }
 }
 
+@media screen and (min-width: 600px){
+    #information {
+        
+    }
+}
+
 nav {
-    background-color: $color--white;
-    padding: $padding-s $padding;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    height: 60px; // want logo is 40px hoog en padding-t en b is 10px
-    
-    #logo {
-        height: 40px;
-        width: auto;
-    }
-    
-    .hamburger-menu-container {
-        .hamburger-menu {
-            position: relative;
-            display: block;
-            width: 26px;
-            height: 24px;
-            cursor: pointer;
-            z-index: 10;
-            
-            span {
-                position: absolute;
+    .maxwidth {
+        background-color: $color--white;
+        padding: $padding-s $padding;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        height: 60px; // want logo is 40px hoog en padding-t en b is 10px
+
+
+        #logo {
+            height: 40px;
+            width: auto;
+        }
+
+        .hamburger-menu-container {
+            .hamburger-menu {
+                position: relative;
                 display: block;
-                width: 20px;
-                height: 2px;
-                right: 0;
-                background-color: $color--black;
-                transition: 0.2s;
-                
-                &:nth-child(1) {
-                    top: calc(0% + 3px);
+                width: 26px;
+                height: 24px;
+                cursor: pointer;
+                z-index: 10;
+
+                span {
+                    position: absolute;
+                    display: block;
+                    width: 20px;
+                    height: 2px;
+                    right: 0;
+                    background-color: $color--black;
+                    transition: 0.2s;
+
+                    &:nth-child(1) {
+                        top: calc(0% + 3px);
+                    }
+
+                    &:nth-child(2) {
+                        width: 26px;
+                        top: calc(50% - 1px);
+                    }
+
+                    &:nth-child(3) {
+                        top: calc(100% - 5px);
+                    }
                 }
-                
-                &:nth-child(2) {
-                    width: 26px;
-                    top: calc(50% - 1px);
-                }
-                
-                &:nth-child(3) {
-                    top: calc(100% - 5px);
+                &:hover {
+                    span {
+                        width: 23px;
+                        transition: 0.2s;
+                    }
                 }
             }
-            &:hover {
+            .open {
+                &:hover {
+                    span {
+                        width: 20px;
+                    }
+                }
                 span {
-                    width: 23px;
                     transition: 0.2s;
+                    transform-origin: left center;
+
+                    &:nth-child(1) {
+                        transform: rotate(-45deg) translateX(-11px) translateY(11px);
+                    }
+
+                    &:nth-child(2) {
+                        width: 0;
+                    }
+
+                    &:nth-child(3) {
+                        transform: rotate(45deg) translateX(-10px) translateY(-11px);
+                    }
                 }
             }
         }
-        .open {
-            &:hover {
-                span {
-                    width: 20px;
+
+        .navigation {
+            flex-direction: column;
+            width: 100%;
+            display: none;
+            position: absolute;
+            z-index: 2;
+            top: 80px;
+            left: 0;
+            background-color: $color--gray;
+            //box-shadow: 0px -5px 40px 0px rgba(255,255,255,0.5);
+
+            li:not(:last-child) {
+                border-bottom: 1px solid lightgray;  
+
+                .drop {
+
+                    li {
+                        border-bottom: 0; 
+                    }
+                }
+
+            }
+
+            li {
+
+                a {
+                    display: block;
+                    color: $color--link;
+                    padding: $padding;
+                    clear: both;
+                    transition: 0.2s;
+                    border-right: 3px solid $color--gray;
+                    //border-bottom: 
+
+                    &:hover {
+                        color: red;
+                        transition: 0.2s;
+                        border-right: 3px solid $color--red;
+                        box-sizing: border-box;
+                    }
+                }
+
+
+                .dropdown {
+                    background-image: url('../img/down-arrow.svg');
+                    background-repeat: no-repeat;
+                    background-size: 20px 20px;
+                    background-position: calc(100% - 20px) center; 
+                }
+
+                .dropped {
+                    background-image: url('../img/up-arrow.svg');
+                }
+
+                .drop {
+                    display: none;
+
+                    li {
+                        text-indent: 20px;
+                    }
                 }
             }
-            span {
-                transition: 0.2s;
-                transform-origin: left center;
+
+        }
+    }
+}
+
+@media screen and (min-width: 600px){
+    nav { // moet er allemaal bijstaan om even specifieke css-selector te zijn
+        .maxwidth {
+            #logo {
+            
+            }
+            
+            .hamburger-menu-container {
+                display: none;
+            }
+
+            .navigation {
+                position: static;
+                display: block;
                 
-                &:nth-child(1) {
-                    transform: rotate(-45deg) translateX(-11px) translateY(11px);
-                }
-                
-                &:nth-child(2) {
-                    width: 0;
-                }
-                
-                &:nth-child(3) {
-                    transform: rotate(45deg) translateX(-10px) translateY(-11px);
-                }
+                flex-direction: row;
+                flex-basis: calc(100% - 233px);
+                top: 0;
+                background-color: transparent;
             }
         }
     }
     
-    .navigation {
-        flex-direction: column;
-        width: 100%;
-        display: none;
-        position: absolute;
-        z-index: 2;
-        top: 80px;
-        left: 0;
-        background-color: $color--gray;
-        
-        li {
-            width: calc(100vw - #{$padding});
-            padding: $padding;
-            
-            a {
-                color: $color--link;
-                padding: $padding;
-                clear: both;
-                transition: 0.5s;
-                
-                &:hover {
-                    color: red;
-                    transition: 0.5s;
-                }
-            }
-            ul {
-                
-            }
-        }
-        
-    }
+    
+    
 }
 
 header {
@@ -184,9 +260,11 @@ header {
     
         #jumbotron {
             background-image: url('../img/red_x.svg'); // Rode X
+            background-size: cover;
             padding: 40px 0;
+            min-width: 500px;
             width: 80%;
-            max-width: 800%;
+            max-width: 800px;
             margin: 100px auto;
             color: $color--white;
             flex-direction: column;
@@ -241,7 +319,7 @@ section {
     h3 {
         display: inline-block;
         font-family: "Helvetica";
-        font-size: 16px;
+        font-size: 36px;
         position: relative;
         margin-bottom: $margin;
         font-weight: bold; 
@@ -254,8 +332,8 @@ section {
             display: block;
             left: 0;
             top: -20px;
-            width: 50px;
-            height: 2px;
+            width: 70px;
+            height: 3px;
             background-color: $color--red;
         }
     }
@@ -342,7 +420,7 @@ section {
 #subscribe {
     background-image: url('../img/subscribe-bg.png');
     background-repeat: repeat;
-    background-size: 50% 50%;
+    background-size: 200px 100px;
     background-color: red;
     color: white;
     padding-top: 30px;
@@ -354,39 +432,110 @@ section {
 
 footer {
     background-color: $color--gray;
+    color: $color--white;
+    
+    .maxwidth {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .splitline {
+        border-bottom: 1px solid $color--lightgray;
+    }
     
     div.flex {
         flex-direction: column;
         
         div {
+            width: 80%;
+            margin: 0 auto;
             
             #footerlogo {
                 display: block;
+                max-width: 300px;
                 width: 70%;
                 height: auto;
                 margin: $margin-l auto;
             }
             
             ul {
-                padding: $padding;
+                //padding: $padding;
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: center;
+                margin-bottom: $margin-l;
                 
                 li {
                     flex-basis: 50%;
                     text-align: center;
+                    box-sizing: border-box;
+                    clear: both;
                     
                     a {
+                        display: block;
                         width: 100%;
-                        padding: $padding 20px;
+                        padding: $padding-s;
+                        box-sizing: border-box;
+                        transition: 0.2s;
+                        
+                        &:hover {
+                            color: red;
+                            transition: 0.2s;
+                        }
                     }
                 }
             }
-            
         }
         
+        .address {
+            text-align: center;
+            
+                h4 {
+                    color: $color--red;
+                }
+
+                h4, a {
+                    line-height: 1.4em;
+                }
+
+                .socials {
+                    width: 150px;
+                    flex-direction: row;
+                    margin-top: $margin;
+                    margin-bottom: $margin;
+
+                    a {
+                        flex-basis: 33%;
+                        padding: 5px 0;
+
+                        img {
+                            text-align: center;
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+    }
+    
+    .copyright {
+        flex-direction: column;
+        text-align: center;
+        color: $color--lightgray;
         
+        p {
+            padding: $padding-s 0;
+            
+            a {
+                transition: 0.2s;
+                font-weight: bold;
+                
+                &:hover {
+                    color: red;
+                    transition: 0.2s;
+                }
+            }
+        }
     }
     
 }

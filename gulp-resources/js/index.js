@@ -39,11 +39,24 @@ $(document).ready(function(){
         checkhamburgermenu();
     });
     
+    $(".dropdown").on('click', function(){
+        $(this).toggleClass("dropped");
+        checkdropdownmenu(this);
+    });
+    
     function checkhamburgermenu() {
         if($(".hamburger-menu").hasClass("open")) {
             $(".navigation").slideDown();
         } else {
             $(".navigation").slideUp();
+        };
+    }
+    
+    function checkdropdownmenu(e) {
+        if($(e).hasClass("dropped")) {
+            $(".drop").slideDown();
+        } else {
+            $(".drop").slideUp();
         };
     }
 

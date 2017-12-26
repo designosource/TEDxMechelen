@@ -1,5 +1,4 @@
 $(document).ready(function(){
-<<<<<<< HEAD
     
     // scroll naar de div die in de link staat, indien deze naar dezelfde verwijst
     $(function() { 
@@ -40,11 +39,24 @@ $(document).ready(function(){
         checkhamburgermenu();
     });
     
+    $(".dropdown").on('click', function(){
+        $(this).toggleClass("dropped");
+        checkdropdownmenu(this);
+    });
+    
     function checkhamburgermenu() {
         if($(".hamburger-menu").hasClass("open")) {
             $(".navigation").slideDown();
         } else {
             $(".navigation").slideUp();
+        };
+    }
+    
+    function checkdropdownmenu(e) {
+        if($(e).hasClass("dropped")) {
+            $(".drop").slideDown();
+        } else {
+            $(".drop").slideUp();
         };
     }
 
@@ -71,9 +83,4 @@ $(document).ready(function(){
 
     
     
-=======
-
-    alert('TEDx Mechelen');
-
->>>>>>> bd7179336cc21deae2faff6609b9dbd39ea12dae
 });
