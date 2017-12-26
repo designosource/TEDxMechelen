@@ -7,11 +7,15 @@
 body{
     color: $color--black;
     font-family: Helvetica, sans-serif;
-    //overflow-x: hidden;
+    overflow-x: hidden;
     
     a {
         text-decoration: none;
         color: inherit;
+    }
+    
+    p {
+        line-height: 1.5em;
     }
 
     .maxwidth {
@@ -47,7 +51,7 @@ body{
             color: $color--white;
             font-size: $text;
             margin-bottom: 0;
-            //padding-right: $padding;
+            line-height: 1.25em;
             box-sizing: border-box;
             flex-basis: 80%;
         }
@@ -271,26 +275,23 @@ header {
             justify-content: center;
             align-items: center;
             text-align: center;
-
-            .flex {
-                flex-direction: column;
+            
+            img {
+                width: 90%;
+                max-width: 80vw;
+                height: auto;
             }
-
 
             h1 {
                 font-family: "Helvetica";
-                font-size: 50px;
-            }
-
-            h2 {
-                font-family: "Helvetica";
-                font-size: 20px;
-                margin-top: $margin-l;
+                font-size: $h1;
+                margin-top: $margin;
+                margin-bottom: $margin;
                 position: relative;
                 font-weight: bold;
             }
-            
-            .h2--underline {
+
+            .h1--underline {
                 &:after {
                     content: "";
                     position: absolute;
@@ -302,10 +303,8 @@ header {
                     left: calc(50% - 50px);
                 }
             }
-
         }
     }
-    
 }
 
 section {
@@ -319,7 +318,7 @@ section {
     h3 {
         display: inline-block;
         font-family: "Helvetica";
-        font-size: 36px;
+        font-size: $h3;
         position: relative;
         margin-bottom: $margin;
         font-weight: bold; 
@@ -426,7 +425,8 @@ section {
     padding-top: 30px;
     
     h3{
-        margin-bottom: 10px;        
+        margin-bottom: 10px; 
+        font-size: $h3-s;
     }
 }
 
