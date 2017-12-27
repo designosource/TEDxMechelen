@@ -226,7 +226,7 @@ nav {
     }
 }
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 820px){
     nav { // moet er allemaal bijstaan om even specifieke css-selector te zijn
         .maxwidth {
             #logo {
@@ -239,19 +239,70 @@ nav {
 
             .navigation {
                 position: static;
-                display: block;
-                
+                display: flex;
                 flex-direction: row;
                 flex-basis: calc(100% - 233px);
                 top: 0;
                 background-color: transparent;
+                justify-content: flex-end;
+            }
+
+            .navigation li {
+                border:none;
+            }
+
+            .navigation li:not(:last-child) {
+                border-bottom: none;
+            }
+
+            .navigation li a{
+                color: $color--black;
+                border:none;
+                top:0;
+                font-weight: bold;
+            }
+
+            .navigation li a:hover {
+                border-right: none;
+                border-bottom: 3px solid $color--red;
+                color: red;
+                transition: none;
+                box-sizing: border-box;
+                top:0;
+
             }
         }
+
+    }
+
+
+    .carousel{
+display: flex;
+    }
+        .carousel-item {
+            width: 33%;
+            max-width: none;
+            margin: 0 auto;
+            //background-color: red;
+            text-align: center;
+            padding: 10px;
+        }
+
+            .bg-img-x {
+                background-image: url('../img/red_x.svg');
+                background-repeat: no-repeat;
+                background-size: contain!important;
+                height: 300px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
     }
     
     
     
 }
+
 
 header {
     background-color: red;
