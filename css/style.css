@@ -25,6 +25,11 @@
   border: 2px solid white;
   box-sizing: border-box; }
 
+.btn-l:hover {
+  cursor: pointer;
+  color: #e62b1e;
+  background-color: white; }
+
 body {
   color: #000000;
   font-family: Helvetica, sans-serif;
@@ -67,11 +72,11 @@ body {
       justify-content: flex-end; }
       #information .flex .information--socials a {
         margin-left: 10px;
-        padding: 0; }
-        #information .flex .information--socials a img {
-          margin-top: 4px;
-          width: 20px;
-          height: 20px; }
+        padding: 3px;
+        color: white;
+        margin-top: 4px; }
+      #information .flex .information--socials a:hover {
+        color: #e62b1e; }
 
 nav .maxwidth {
   background-color: white;
@@ -199,7 +204,14 @@ nav .maxwidth {
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center; } }
+    align-items: center; }
+  .splitline.flex {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-top: 20px; }
+  .copyright.flex {
+    flex-direction: row;
+    justify-content: space-around; } }
 
 header {
   background-color: red;

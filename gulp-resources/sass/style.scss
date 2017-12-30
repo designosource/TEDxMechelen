@@ -64,12 +64,12 @@ body{
 
             a {
                 margin-left: 10px;
-                padding:0;
-                img {
-                    margin-top: 4px;
-                    width: 20px;
-                    height: 20px;
-                }
+                padding:3px;
+                color: $color--white;
+                margin-top: 4px ;
+            }
+            a:hover {
+                color: $color--red;
             }
         }
     }
@@ -298,7 +298,17 @@ display: flex;
                 justify-content: center;
                 align-items: center;
     }
-    
+
+    .splitline.flex{
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding-top: 20px;
+    }
+
+    .copyright.flex{
+        flex-direction: row;
+        justify-content: space-around;
+    }
     
     
 }

@@ -33,3 +33,9 @@
     border: 2px solid white;
     box-sizing: border-box;
 }
+
+.btn-l:hover {
+  cursor: pointer;
+    color: $color--red;
+    background-color: $color--white;
+}
