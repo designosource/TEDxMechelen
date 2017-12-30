@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .btn {
   display: block;
   background-color: transparent;
@@ -172,50 +173,88 @@ nav .maxwidth {
     top: 0;
     background-color: transparent;
     justify-content: flex-end; }
-  nav .maxwidth .navigation li {
-    border: none; }
-  nav .maxwidth .navigation li:not(:last-child) {
-    border-bottom: none; }
-  nav .maxwidth .navigation li a {
-    color: #000000;
-    border: none;
-    top: 0;
-    font-weight: bold; }
-  nav .maxwidth .navigation li a:hover {
-    border-right: none;
-    border-bottom: 3px solid #e62b1e;
-    color: red;
-    transition: none;
-    box-sizing: border-box;
-    top: 0; }
+    nav .maxwidth .navigation li {
+      border: none; }
+      nav .maxwidth .navigation li:not(:last-child) {
+        border-bottom: none; }
+      nav .maxwidth .navigation li a {
+        color: #000000;
+        border: none;
+        top: 0;
+        font-weight: bold;
+        position: relative; }
+        nav .maxwidth .navigation li a:before {
+          content: ‘’;
+          display: block;
+          position: absolute;
+          transition: 0.2s;
+          width: 0%;
+          height: 3px;
+          background-color: #e62b1e;
+          left: 0;
+          bottom: 0px; }
+        nav .maxwidth .navigation li a:hover {
+          border-right: none;
+          color: red; }
+          nav .maxwidth .navigation li a:hover:before {
+            width: 100%; }
   .carousel {
     display: flex; }
-  .carousel-item {
-    width: 33%;
-    max-width: none;
-    margin: 0 auto;
-    text-align: center;
-    padding: 10px; }
-  .bg-img-x {
-    background-image: url("../img/red_x.svg");
-    background-repeat: no-repeat;
-    background-size: contain !important;
-    height: 300px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-  .splitline.flex {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    padding-top: 20px; }
-  .copyright.flex {
-    flex-direction: row;
-    justify-content: space-around; } }
+    .carousel .carousel-item {
+      width: 33%;
+      max-width: none;
+      margin: 0 auto;
+      text-align: center;
+      padding: 10px; }
+    .carousel .bg-img-x {
+      background-image: url(‘../img/red_x.svg’);
+      background-repeat: no-repeat;
+      background-size: contain !important;
+      height: 300px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .carousel .splitline.flex {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      padding-top: 20px; }
+    .carousel .copyright.flex {
+      flex-direction: row;
+      justify-content: space-around; } }
+
+.carousel {
+  display: flex; }
+
+.carousel-item {
+  width: 33%;
+  max-width: none;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px; }
+
+.bg-img-x {
+  background-image: url("../img/red_x.svg");
+  background-repeat: no-repeat;
+  background-size: contain !important;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.splitline.flex {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding-top: 20px; }
+
+.copyright.flex {
+  flex-direction: row;
+  justify-content: space-around; }
 
 header {
   background-color: red;
-  background-image: url("../img/header.png"); }
+  background-image: url("../img/home.jpg"); }
   header .flex {
     flex-wrap: wrap;
     justify-content: center;
@@ -319,7 +358,8 @@ section {
           font-weight: bold;
           color: #000000; }
   section .meetspeakers {
-    display: inline-block;
+    display: block;
+    width: max-content;
     margin: 10px auto;
     text-align: center; }
   section .link--red {
@@ -389,10 +429,8 @@ footer {
         footer div.flex .address .socials a {
           flex-basis: 33%;
           padding: 5px 0; }
-          footer div.flex .address .socials a img {
-            text-align: center;
-            width: 20px;
-            height: 20px; }
+          footer div.flex .address .socials a :hover {
+            color: #e62b1e; }
   footer .copyright {
     flex-direction: column;
     text-align: center;

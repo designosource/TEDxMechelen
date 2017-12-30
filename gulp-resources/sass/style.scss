@@ -227,12 +227,12 @@ nav {
 }
 
 @media screen and (min-width: 820px){
-    nav { // moet er allemaal bijstaan om even specifieke css-selector te zijn
+    nav {
         .maxwidth {
             #logo {
-            
+
             }
-            
+
             .hamburger-menu-container {
                 display: none;
             }
@@ -245,35 +245,82 @@ nav {
                 top: 0;
                 background-color: transparent;
                 justify-content: flex-end;
-            }
 
-            .navigation li {
-                border:none;
-            }
+                li {
+                    border:none;
 
-            .navigation li:not(:last-child) {
-                border-bottom: none;
-            }
+                    &:not(:last-child) {
+                        border-bottom: none;
+                    }
 
-            .navigation li a{
-                color: $color--black;
-                border:none;
-                top:0;
-                font-weight: bold;
-            }
+                    a {
+                        color: $color--black;
+                        border:none;
+                        top:0;
+                        font-weight: bold;
+                        position: relative;
 
-            .navigation li a:hover {
-                border-right: none;
-                border-bottom: 3px solid $color--red;
-                color: red;
-                transition: none;
-                box-sizing: border-box;
-                top:0;
+                        &:before {
+                            content: ‘’;
+                            display: block;
+                            position: absolute;
+                            transition: 0.2s;
+                            width: 0%;
+                            height: 3px;
+                            background-color: $color--red;
+                            left: 0;
+                            bottom: 0px;
+                        }
 
+                        &:hover {
+                            border-right: none;
+                            color: red;
+
+                            &:before {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
             }
         }
-
     }
+
+    .carousel {
+        display: flex;
+
+        .carousel-item {
+            width: 33%;
+            max-width: none;
+            margin: 0 auto;
+            //background-color: red;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .bg-img-x {
+            background-image: url(‘../img/red_x.svg’);
+            background-repeat: no-repeat;
+            background-size: contain!important;
+            height: 300px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .splitline.flex {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            padding-top: 20px;
+        }
+
+        .copyright.flex {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+}
 
 
     .carousel{
@@ -309,14 +356,12 @@ display: flex;
         flex-direction: row;
         justify-content: space-around;
     }
-    
-    
-}
+
 
 
 header {
     background-color: red;
-    background-image: url('../img/header.png');
+    background-image: url('../img/home.jpg');
     
     .flex {
         flex-wrap: wrap;
@@ -465,7 +510,8 @@ section {
     }
     
     .meetspeakers {
-        display: inline-block;
+        display: block;
+        width: max-content;
         margin: 10px auto;
         text-align: center;
     }
@@ -568,11 +614,8 @@ footer {
                     a {
                         flex-basis: 33%;
                         padding: 5px 0;
-
-                        img {
-                            text-align: center;
-                            width: 20px;
-                            height: 20px;
+                        :hover{
+                            color: $color--red;
                         }
                     }
                 }
