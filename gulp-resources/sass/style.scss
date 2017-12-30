@@ -238,7 +238,7 @@ nav {
         flex-direction: row;
         justify-content: space-around;
     }
-    
+
     nav {
         .maxwidth {
             #logo {
@@ -516,6 +516,12 @@ section {
         width: max-content;
         margin: 10px auto;
         text-align: center;
+    }
+
+    .meetspeakers:hover{
+        color: $color--black;
+        background-color: $color--white;
+        border: 5px solid $color--black;
     }
     
     .link--red {

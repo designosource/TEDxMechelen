@@ -361,6 +361,10 @@ section {
     width: max-content;
     margin: 10px auto;
     text-align: center; }
+  section .meetspeakers:hover {
+    color: #000000;
+    background-color: white;
+    border: 5px solid #000000; }
   section .link--red {
     color: #e62b1e;
     font-weight: bold; }
