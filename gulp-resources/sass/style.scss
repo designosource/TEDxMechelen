@@ -227,6 +227,18 @@ nav {
 }
 
 @media screen and (min-width: 820px){
+
+    .splitline.flex {
+        flex-direction: row!important;
+        flex-wrap: nowrap!important;
+        padding-top: 20px;
+    }
+
+    .copyright.flex {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
     nav {
         .maxwidth {
             #logo {
@@ -309,16 +321,7 @@ nav {
             align-items: center;
         }
 
-        .splitline.flex {
-            flex-direction: row;
-            flex-wrap: nowrap;
-            padding-top: 20px;
-        }
 
-        .copyright.flex {
-            flex-direction: row;
-            justify-content: space-around;
-        }
     }
 }
 
@@ -347,8 +350,7 @@ display: flex;
     }
 
     .splitline.flex{
-        flex-direction: row;
-        flex-wrap: nowrap;
+        flex-direction: column;
         padding-top: 20px;
     }
 
