@@ -18,14 +18,11 @@ $(document).ready(function(){
     
     
     $(window).on('resize', function(){
-        // functies die moeten uitgevoerd worden op resize van de viewport
+        checkhamburgermenu();
+        navigation();
     });
     
-    // Get current year and push it to the span with id year
-    $("#year").html((new Date).getFullYear());
-    
-    
-   $('.carousel').slick({
+    $('.carousel').slick({
     slidesToShow: 3,
     slidesToScroll: 3,
     autoplay: true,
@@ -69,11 +66,34 @@ $(document).ready(function(){
     });
     
     $(".dropdown").on('click', function(){
+        alert('this: ' + this);
         $(this).toggleClass("dropped");
         checkdropdownmenu(this);
     });
     
     function checkhamburgermenu() {
+        if( $(window).width() > 330 ) {
+            console.log("ja");
+        }
+        
+        
+        if($(".hamburger-menu").hasClass("open")) {
+            $(".navigation").slideDown();
+        } else {
+            $(".navigation").slideUp();
+        };
+    }
+    
+    function navigation() {
+        if( $(window).width() > 850 ) {
+            
+            if($(".hamburger-menu").hasClass("open")) {
+                $(".navigation").slideUp();
+                $(".hamburger-menu").removeClass("open");
+            }
+        }
+        
+        
         if($(".hamburger-menu").hasClass("open")) {
             $(".navigation").slideDown();
         } else {

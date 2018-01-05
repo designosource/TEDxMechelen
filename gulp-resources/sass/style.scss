@@ -49,7 +49,7 @@ body{
         
         p {
             color: $color--white;
-            font-size: $text;
+            font-size: $information;
             margin-bottom: 0;
             line-height: 1.25em;
             box-sizing: border-box;
@@ -66,10 +66,13 @@ body{
                 margin-left: 10px;
                 padding:3px;
                 color: $color--white;
-                margin-top: 4px ;
-            }
-            a:hover {
-                color: $color--red;
+                margin-top: 4px;
+                transition: 0.2s;
+                
+                &:hover {
+                    color: $color--red;
+                    transition: 0.2s;
+                }
             }
         }
     }
@@ -191,7 +194,7 @@ nav {
                     clear: both;
                     transition: 0.2s;
                     border-right: 3px solid $color--gray;
-                    //border-bottom: 
+                    cursor: pointer;
 
                     &:hover {
                         color: red;
@@ -239,65 +242,6 @@ nav {
         justify-content: space-around;
     }
 
-    nav {
-        .maxwidth {
-            #logo {
-
-            }
-
-            .hamburger-menu-container {
-                display: none;
-            }
-
-            .navigation {
-                position: static;
-                display: flex;
-                flex-direction: row;
-                flex-basis: calc(100% - 233px);
-                top: 0;
-                background-color: transparent;
-                justify-content: flex-end;
-
-                li {
-                    border:none;
-
-                    &:not(:last-child) {
-                        border-bottom: none;
-                    }
-
-                    a {
-                        color: $color--black;
-                        border:none;
-                        top:0;
-                        font-weight: bold;
-                        position: relative;
-
-                        &:before {
-                            content: ‘’;
-                            display: block;
-                            position: absolute;
-                            transition: 0.2s;
-                            width: 0%;
-                            height: 3px;
-                            background-color: $color--red;
-                            left: 0;
-                            bottom: 0px;
-                        }
-
-                        &:hover {
-                            border-right: none;
-                            color: red;
-
-                            &:before {
-                                width: 100%;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
     .carousel {
         display: flex;
 
@@ -305,7 +249,6 @@ nav {
             width: 33%;
             max-width: none;
             margin: 0 auto;
-            //background-color: red;
             text-align: center;
             padding: 10px;
         }
@@ -327,7 +270,7 @@ nav {
 
 
     .carousel{
-display: flex;
+        display: flex;
     }
         .carousel-item {
             width: 33%;
@@ -472,7 +415,6 @@ section {
             width: 80%;
             max-width: 500px;
             margin: 0 auto;
-            //background-color: red;
             text-align: center;
             
             .bg-img-x {
@@ -494,6 +436,7 @@ section {
             
             a {
                 font-weight: bold;
+                line-height: 1.6em;
             }
             
             .carousel-item-speaker {
@@ -516,12 +459,13 @@ section {
         width: max-content;
         margin: 10px auto;
         text-align: center;
-    }
-
-    .meetspeakers:hover{
-        color: $color--black;
-        background-color: $color--white;
         border: 5px solid $color--black;
+    
+        &:hover{
+            color: $color--black;
+            background-color: $color--white;
+        }
+        
     }
     
     .link--red {
@@ -622,8 +566,11 @@ footer {
                     a {
                         flex-basis: 33%;
                         padding: 5px 0;
+                        transition: 0.2s;
+                        
                         :hover{
                             color: $color--red;
+                            transition: 0.2s;
                         }
                     }
                 }
@@ -650,6 +597,67 @@ footer {
         }
     }
     
+}
+
+@media screen and (min-width: 850px){
+    nav {
+        .maxwidth {
+            #logo {
+
+            }
+
+            .hamburger-menu-container {
+                display: none;
+            }
+
+            .navigation {
+                position: static;
+                display: flex;
+                flex-direction: row;
+                flex-basis: calc(100% - 233px);
+                top: 0;
+                background-color: transparent;
+                justify-content: flex-end;
+
+                li {
+                    border:none;
+
+                    &:not(:last-child) {
+                        border-bottom: none;
+                    }
+
+                    a {
+                        color: $color--black;
+                        border:none;
+                        top:0;
+                        font-weight: bold;
+                        position: relative;
+
+                        &:before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            transition: 0.2s;
+                            width: 0%;
+                            height: 3px;
+                            background-color: $color--red;
+                            left: 0;
+                            bottom: 0px;
+                        }
+
+                        &:hover {
+                            border-right: none;
+                            color: red;
+
+                            &:before {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 
