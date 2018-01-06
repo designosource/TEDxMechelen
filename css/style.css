@@ -201,7 +201,7 @@ nav .maxwidth {
       background-image: url(‘../img/red_x.svg’);
       background-repeat: no-repeat;
       background-size: contain !important;
-      height: 300px;
+      height: 250px;
       overflow: hidden;
       display: flex;
       justify-content: center;
@@ -221,7 +221,7 @@ nav .maxwidth {
   background-image: url("../img/red_x.svg");
   background-repeat: no-repeat;
   background-size: contain !important;
-  height: 300px;
+  height: 250px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -320,7 +320,7 @@ section {
       text-align: center; }
       section .carousel .carousel-item .bg-img-x {
         background-image: url("../img/red_x.svg");
-        height: 300px;
+        height: 250px;
         overflow: hidden;
         display: flex;
         justify-content: center;
