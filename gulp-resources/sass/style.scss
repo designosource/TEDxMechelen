@@ -441,7 +441,7 @@ section {
             
             .bg-img-x {
                 background-image: url('../img/red_x.svg');
-                height: 250px;
+                height: 300px;
                 overflow: hidden;
                 display: flex;
                 justify-content: center;
@@ -607,6 +607,7 @@ footer {
         
         p {
             padding: $padding-s 0;
+            font-size: 12px;
             
             a {
                 transition: 0.2s;

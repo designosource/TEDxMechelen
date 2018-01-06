@@ -320,7 +320,7 @@ section {
       text-align: center; }
       section .carousel .carousel-item .bg-img-x {
         background-image: url("../img/red_x.svg");
-        height: 250px;
+        height: 300px;
         overflow: hidden;
         display: flex;
         justify-content: center;
@@ -427,7 +427,8 @@ footer {
     text-align: center;
     color: #58595B; }
     footer .copyright p {
-      padding: 10px 0; }
+      padding: 10px 0;
+      font-size: 12px; }
       footer .copyright p a {
         transition: 0.2s;
         font-weight: bold; }
