@@ -16,12 +16,6 @@ $(document).ready(function(){
         
     });        
     
-    
-    $(window).on('resize', function(){
-        checkhamburgermenu();
-        navigation();
-    });
-    
     $('.carousel').slick({
     slidesToShow: 3,
     slidesToScroll: 3,
@@ -63,73 +57,73 @@ $(document).ready(function(){
     $(".hamburger-menu").on('click', function(){
         $(".hamburger-menu").toggleClass("open");
         checkhamburgermenu();
+        navigation();
     });
     
-    $(".dropdown").on('click', function(){
-        alert('this: ' + this);
-        $(this).toggleClass("dropped");
-        checkdropdownmenu(this);
+    $(".dropdown").on('click', function(e){
+        $(".dropdown").toggleClass("dropped");
+        
+        if($(".dropdown").hasClass("dropped")) {
+            $('.drop').slideDown();
+        } else {
+            $('.drop').slideUp();
+        }
+        
     });
     
     function checkhamburgermenu() {
-        if( $(window).width() > 330 ) {
-            console.log("ja");
-        }
+        // breakpoint bereikt?
         
-        
-        if($(".hamburger-menu").hasClass("open")) {
-            $(".navigation").slideDown();
+        // JA
+        if( $(window).width() > 850 ) {
+            
+            // remove class 'open' from hamburger-menu
+            if( $(".hamburger-menu").hasClass('open') ){
+                
+                // sluit hamburger menu
+                $(".hamburger-menu").removeClass('open');
+                
+                // laat hamburger menu verdwijnen
+                $(".hamburger-menu").css('display', 'none');
+                
+            }
+            
+            // maak van navigatie een flex element
+            $('.navigation').css('display', 'flex');
+            
+        // NEE
         } else {
-            $(".navigation").slideUp();
-        };
+            
+            // hamburger menu moet er staan!
+            $(".hamburger-menu").css('display', 'block');
+            
+            // hamburger menu is geklikt
+            if( $(".hamburger-menu").hasClass('open') ){
+                
+                // open navigatie
+                $(".navigation").slideDown();
+                
+            } else {
+                
+                // sluit navigatie
+                $(".navigation").slideUp();
+                
+            }
+            
+        }
     }
     
     function navigation() {
+        // breakpoint bereikt?
+        
+        // JA
         if( $(window).width() > 850 ) {
             
+            // verwijder open class van hamburger
             if($(".hamburger-menu").hasClass("open")) {
-                $(".navigation").slideUp();
                 $(".hamburger-menu").removeClass("open");
             }
         }
-        
-        
-        if($(".hamburger-menu").hasClass("open")) {
-            $(".navigation").slideDown();
-        } else {
-            $(".navigation").slideUp();
-        };
     }
-    
-    function checkdropdownmenu(e) {
-        if($(e).hasClass("dropped")) {
-            $(".drop").slideDown();
-        } else {
-            $(".drop").slideUp();
-        };
-    }
-
-    
-    function homebackground() {
-
-        $offset = $('body').scrollTop();
-
-        if( $(window).width() > 330 ) { // vanaf wanneer moet parallax actief zijn
-            // Parallax background
-            $("#home").css('background-position', 'center ' + 'calc(20% - ' + '35px - ' + Math.round($offset * 0.1 ) + 'px)');
-        } else {
-            // No parallax background
-            $("#home").css('background-position', 'center top');
-        }
-
-    }
-
-    $("body").scroll(function(){
-
-        homebackground();
-
-    });
-
-    
     
 });

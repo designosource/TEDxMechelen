@@ -1,22 +1,22 @@
 @import "_colors.scss";
 
 ::-webkit-selection
-{background: fade-out($color, 0.5);color:white;text-shadow: none;}
+{background: fade-out($color--red, 0.5);color:white;text-shadow: none;}
 ::-moz-selection 
-{background: fade-out($color, 0.5);color:white;text-shadow: none;}
+{background: fade-out($color--red, 0.5);color:white;text-shadow: none;}
 ::-o-selection 
-{background: fade-out($color, 0.5);color:white;text-shadow: none;}
+{background: fade-out($color--red, 0.5);color:white;text-shadow: none;}
 ::-ms-selection 
-{background: fade-out($color, 0.5);color:white;text-shadow: none;}
+{background: fade-out($color--red, 0.5);color:white;text-shadow: none;}
 ::selection 
-{background: fade-out($color, 0.5);color:white;text-shadow: none;}
+{background: fade-out($color--red, 0.5);color:white;text-shadow: none;}
 img::selection
 {background: transparent;}
 img::-moz-selection
 {background: transparent;}
 body {
-    -webkit-tap-highlight-color: fade-out($color, 0.5);
+    -webkit-tap-highlight-color: fade-out($color--red, 0.5);
 }
 a::selection {
-    color: $color;
+    color: $color--red;
 }

@@ -64,7 +64,7 @@ gulp.task('js', function() {
     gutil.log(gutil.colors.red('Compressing js'));
     gulp.src('gulp-resources/js/*.js')
     .pipe(plumber())
-    .pipe(minify())
+    //.pipe(minify())
     .pipe(gulp.dest('js/'))
 });
 
