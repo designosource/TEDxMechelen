@@ -480,6 +480,7 @@ section {
         display: block;
         width: max-content;
         margin: 10px auto;
+        margin-top: 107px;
         text-align: center;
         border: 5px solid $color--black;
     
@@ -686,8 +687,56 @@ footer {
                     
                     .drop {
                         position: absolute;
-                        bottom: 20px;
+                        top: 56px;
                         display: none;
+                        background-color: $color--gray;
+                        width: calc(100% + 60px);
+                        color: $color--white!important;
+                        
+                        &:hover {
+                            display: block!important;
+                        }
+                        
+                        li:not(:last-child) {
+                            border-bottom: 1px solid $color--lightgray;
+                        }
+                        
+                        li {
+                            a {
+                                color: $color--white;
+                                padding: $padding-s 15px;
+                                text-indent: 0;
+                                
+                                &:before {
+                                    content: '';
+                                    display: block;
+                                    position: absolute;
+                                    transition: 0.2s;
+                                    width: 3px;
+                                    height: 0;
+                                    background-color: $color--red;
+                                    right: 0%;
+                                    left: calc(100% - 3px);
+                                    top: 50%;
+                                }
+                                
+                                &:hover {
+                                    
+                                    &:before {
+                                        top: 0%;
+                                        height: 100%;
+                                        transition: 0.2s;
+                                        right: 0%;
+                                    }
+                                }
+                                
+                            }
+                        }
+                        
+                    }
+                    
+                    a:hover + .drop {
+                        display: block!important;
                     }
                     
                 }

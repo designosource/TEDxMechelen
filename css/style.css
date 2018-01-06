@@ -345,6 +345,7 @@ section {
     display: block;
     width: max-content;
     margin: 10px auto;
+    margin-top: 107px;
     text-align: center;
     border: 5px solid #000000; }
     section .meetspeakers:hover {
@@ -477,8 +478,37 @@ footer {
             left: 0%; }
       nav .maxwidth .navigation li .drop {
         position: absolute;
-        bottom: 20px;
-        display: none; } }
+        top: 56px;
+        display: none;
+        background-color: #2D2D2D;
+        width: calc(100% + 60px);
+        color: white !important; }
+        nav .maxwidth .navigation li .drop:hover {
+          display: block !important; }
+        nav .maxwidth .navigation li .drop li:not(:last-child) {
+          border-bottom: 1px solid #58595B; }
+        nav .maxwidth .navigation li .drop li a {
+          color: white;
+          padding: 10px 15px;
+          text-indent: 0; }
+          nav .maxwidth .navigation li .drop li a:before {
+            content: '';
+            display: block;
+            position: absolute;
+            transition: 0.2s;
+            width: 3px;
+            height: 0;
+            background-color: #e62b1e;
+            right: 0%;
+            left: calc(100% - 3px);
+            top: 50%; }
+          nav .maxwidth .navigation li .drop li a:hover:before {
+            top: 0%;
+            height: 100%;
+            transition: 0.2s;
+            right: 0%; }
+      nav .maxwidth .navigation li a:hover + .drop {
+        display: block !important; } }
 
 ::-webkit-selection {
   background: rgba(230, 43, 30, 0.5);
