@@ -41,7 +41,7 @@ body{
 
 #information {
     background-color: $color--black;
-    padding: $padding-s;
+    padding: $padding-s $padding;
     
     .flex {
         justify-content: space-between;
@@ -186,6 +186,7 @@ nav {
             }
 
             li {
+                flex-basis: 100%;
 
                 a {
                     display: block;
@@ -193,14 +194,36 @@ nav {
                     padding: $padding;
                     clear: both;
                     transition: 0.2s;
-                    border-right: 3px solid $color--gray;
+                    //border-right: 3px solid $color--gray;
                     cursor: pointer;
+                    position: relative;
+                    
+                    &:before {
+                        display: none;
+                    }
+                    
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        display: block;
+                        width: 3px;
+                        height: 0;
+                        top: 50%;
+                        right: 0;
+                        background-color: $color--red;
+                        transition: 0.2s;
+                    }
 
                     &:hover {
                         color: red;
-                        transition: 0.2s;
-                        border-right: 3px solid $color--red;
+                        transition: 0.5s;
+                        //border-right: 3px solid $color--red;
                         box-sizing: border-box;
+                        
+                        &:after {
+                            height: 100%;
+                            top: 0%;
+                        }
                     }
                 }
 
@@ -234,7 +257,7 @@ nav {
     .splitline.flex {
         flex-direction: row!important;
         flex-wrap: nowrap!important;
-        padding-top: 20px;
+        padding-top: $padding-l!important;
     }
 
     .copyright.flex {
@@ -294,7 +317,7 @@ nav {
 
     .splitline.flex{
         flex-direction: column;
-        padding-top: 20px;
+        padding-top: $padding;
     }
 
     .copyright.flex{
@@ -612,7 +635,7 @@ footer {
 
             .navigation {
                 position: static;
-                display: flex;
+                display: flex!important;
                 flex-direction: row;
                 flex-basis: calc(100% - 233px);
                 top: 0;
@@ -621,6 +644,8 @@ footer {
 
                 li {
                     border:none;
+                    flex-basis: auto;
+                    position: relative;
 
                     &:not(:last-child) {
                         border-bottom: none;
@@ -633,6 +658,10 @@ footer {
                         font-weight: bold;
                         position: relative;
 
+                        &:after {
+                            display: none;
+                        }
+                        
                         &:before {
                             content: '';
                             display: block;
@@ -641,7 +670,7 @@ footer {
                             width: 0%;
                             height: 3px;
                             background-color: $color--red;
-                            left: 0;
+                            left: 50%;
                             bottom: 0px;
                         }
 
@@ -651,9 +680,17 @@ footer {
 
                             &:before {
                                 width: 100%;
+                                left: 0%;
                             }
                         }
                     }
+                    
+                    .drop {
+                        position: absolute;
+                        bottom: 20px;
+                        display: none;
+                    }
+                    
                 }
             }
         }
