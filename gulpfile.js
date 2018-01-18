@@ -36,6 +36,8 @@ gulp.task('css-prefix', function () {
         }))
         .pipe(plumber.stop())
         .pipe(gulp.dest('css/'))
+        .pipe(gulp.dest('about/css/'))
+        .pipe(gulp.dest('event/css/'))
 });
 
 /* IMAGE COMPRESS */
@@ -49,6 +51,8 @@ gulp.task('imagesDefault', () =>
         .pipe(imagemin())
         .pipe(plumber.stop())
         .pipe(gulp.dest('img/'))
+        .pipe(gulp.dest('about/img/'))
+        .pipe(gulp.dest('event/img/'))
 );
 
 gulp.task('imagesHosts', () =>
@@ -66,6 +70,8 @@ gulp.task('js', function() {
     .pipe(plumber())
     //.pipe(minify())
     .pipe(gulp.dest('js/'))
+    .pipe(gulp.dest('about/js/'))
+    .pipe(gulp.dest('event/js/'))
 });
 
 /* DEFAULT: GULP */
