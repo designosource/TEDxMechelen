@@ -2,6 +2,7 @@
 .btn {
   display: block;
   background-color: transparent;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   padding: 5px 10px;
   margin: 10px;
@@ -24,6 +25,7 @@
 .btn-l {
   padding: 20px;
   border: 2px solid white;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 .btn-l:hover {
@@ -44,7 +46,10 @@ body {
     max-width: 1000px;
     margin: 0 auto; }
   body .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
   body .bg-img {
     background-repeat: no-repeat;
@@ -57,34 +62,54 @@ body {
   background-color: #000000;
   padding: 10px 20px; }
   #information .flex {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center; }
     #information .flex p {
       color: white;
       font-size: 16px;
       margin-bottom: 0;
       line-height: 1.25em;
+      -webkit-box-sizing: border-box;
       box-sizing: border-box;
+      -ms-flex-preferred-size: 80%;
       flex-basis: 80%; }
     #information .flex .information--socials {
+      -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
       flex-direction: row;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
       justify-content: flex-end; }
       #information .flex .information--socials a {
         margin-left: 10px;
         padding: 3px;
         color: white;
         margin-top: 4px;
+        -webkit-transition: 0.2s;
         transition: 0.2s; }
         #information .flex .information--socials a:hover {
           color: #e62b1e;
+          -webkit-transition: 0.2s;
           transition: 0.2s; }
 
 nav .maxwidth {
   background-color: white;
   padding: 10px 20px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   position: relative;
   height: 60px; }
@@ -105,6 +130,7 @@ nav .maxwidth {
       height: 2px;
       right: 0;
       background-color: #000000;
+      -webkit-transition: 0.2s;
       transition: 0.2s; }
       nav .maxwidth .hamburger-menu-container .hamburger-menu span:nth-child(1) {
         top: calc(0% + 3px); }
@@ -115,19 +141,27 @@ nav .maxwidth {
         top: calc(100% - 5px); }
     nav .maxwidth .hamburger-menu-container .hamburger-menu:hover span {
       width: 23px;
+      -webkit-transition: 0.2s;
       transition: 0.2s; }
   nav .maxwidth .hamburger-menu-container .open:hover span {
     width: 20px; }
   nav .maxwidth .hamburger-menu-container .open span {
+    -webkit-transition: 0.2s;
     transition: 0.2s;
+    -webkit-transform-origin: left center;
     transform-origin: left center; }
     nav .maxwidth .hamburger-menu-container .open span:nth-child(1) {
+      -webkit-transform: rotate(-45deg) translateX(-11px) translateY(11px);
       transform: rotate(-45deg) translateX(-11px) translateY(11px); }
     nav .maxwidth .hamburger-menu-container .open span:nth-child(2) {
       width: 0; }
     nav .maxwidth .hamburger-menu-container .open span:nth-child(3) {
+      -webkit-transform: rotate(45deg) translateX(-10px) translateY(-11px);
       transform: rotate(45deg) translateX(-10px) translateY(-11px); }
   nav .maxwidth .navigation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     width: 100%;
     display: none;
@@ -141,12 +175,14 @@ nav .maxwidth {
       nav .maxwidth .navigation li:not(:last-child) .drop li {
         border-bottom: 0; }
     nav .maxwidth .navigation li {
+      -ms-flex-preferred-size: 100%;
       flex-basis: 100%; }
       nav .maxwidth .navigation li a {
         display: block;
         color: white;
         padding: 20px;
         clear: both;
+        -webkit-transition: 0.2s;
         transition: 0.2s;
         cursor: pointer;
         position: relative; }
@@ -161,10 +197,13 @@ nav .maxwidth {
           top: 50%;
           right: 0;
           background-color: #e62b1e;
+          -webkit-transition: 0.2s;
           transition: 0.2s; }
         nav .maxwidth .navigation li a:hover {
           color: red;
+          -webkit-transition: 0.5s;
           transition: 0.5s;
+          -webkit-box-sizing: border-box;
           box-sizing: border-box; }
           nav .maxwidth .navigation li a:hover:after {
             height: 100%;
@@ -183,13 +222,23 @@ nav .maxwidth {
 
 @media screen and (min-width: 820px) {
   .splitline.flex {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+    -ms-flex-direction: row !important;
     flex-direction: row !important;
+    -ms-flex-wrap: nowrap !important;
     flex-wrap: nowrap !important;
     padding-top: 40px !important; }
   .copyright.flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -ms-flex-pack: distribute;
     justify-content: space-around; }
   .carousel {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; }
     .carousel .carousel-item {
       width: 33%;
@@ -203,11 +252,19 @@ nav .maxwidth {
       background-size: contain !important;
       height: 250px;
       overflow: hidden;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center; } }
 
 .carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex; }
 
 .carousel-item {
@@ -223,24 +280,42 @@ nav .maxwidth {
   background-size: contain !important;
   height: 250px;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center; }
 
 .splitline.flex {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   padding-top: 20px; }
 
 .copyright.flex {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-pack: distribute;
   justify-content: space-around; }
 
 header {
   background-color: red;
   background-image: url("../img/home.jpg"); }
   header .flex {
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center; }
     header .flex #jumbotron {
       background-image: url("../img/red_x.svg");
@@ -251,8 +326,15 @@ header {
       max-width: 800px;
       margin: 100px auto;
       color: white;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       text-align: center; }
       header .flex #jumbotron img {
@@ -322,8 +404,14 @@ section {
         background-image: url("../img/red_x.svg");
         height: 300px;
         overflow: hidden;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center; }
         section .carousel .carousel-item .bg-img-x img {
           display: block;
@@ -343,6 +431,8 @@ section {
           color: #000000; }
   section .meetspeakers {
     display: block;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     margin: 10px auto;
     margin-top: 107px;
@@ -375,6 +465,9 @@ footer {
   footer .splitline {
     border-bottom: 1px solid #58595B; }
   footer div.flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column; }
     footer div.flex div {
       width: 80%;
@@ -386,168 +479,38 @@ footer {
         height: auto;
         margin: 40px auto; }
       footer div.flex div ul {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         margin-bottom: 40px; }
         footer div.flex div ul li {
+          -ms-flex-preferred-size: 50%;
           flex-basis: 50%;
           text-align: center;
+          -webkit-box-sizing: border-box;
           box-sizing: border-box;
           clear: both; }
           footer div.flex div ul li a {
             display: block;
             width: 100%;
             padding: 10px;
+            -webkit-box-sizing: border-box;
             box-sizing: border-box;
+            -webkit-transition: 0.2s;
             transition: 0.2s; }
             footer div.flex div ul li a:hover {
               color: red;
+              -webkit-transition: 0.2s;
               transition: 0.2s; }
     footer div.flex .address {
       text-align: center; }
       footer div.flex .address h4 {
-        color: #e62b1e; }
-      footer div.flex .address h4, footer div.flex .address a {
-        line-height: 1.4em; }
-      footer div.flex .address .socials {
-        width: 150px;
-        flex-direction: row;
-        margin-top: 20px;
-        margin-bottom: 20px; }
-        footer div.flex .address .socials a {
-          flex-basis: 33%;
-          padding: 5px 0;
-          transition: 0.2s; }
-          footer div.flex .address .socials a :hover {
-            color: #e62b1e;
-            transition: 0.2s; }
-  footer .copyright {
-    flex-direction: column;
-    text-align: center;
-    color: #58595B; }
-    footer .copyright p {
-      padding: 10px 0;
-      font-size: 12px; }
-      footer .copyright p a {
-        transition: 0.2s;
-        font-weight: bold; }
-        footer .copyright p a:hover {
-          color: red;
-          transition: 0.2s; }
-
-@media screen and (min-width: 850px) {
-  nav .maxwidth .hamburger-menu-container {
-    display: none; }
-  nav .maxwidth .navigation {
-    position: static;
-    display: flex !important;
-    flex-direction: row;
-    flex-basis: calc(100% - 233px);
-    top: 0;
-    background-color: transparent;
-    justify-content: flex-end; }
-    nav .maxwidth .navigation li {
-      border: none;
-      flex-basis: auto;
-      position: relative; }
-      nav .maxwidth .navigation li:not(:last-child) {
-        border-bottom: none; }
-      nav .maxwidth .navigation li a {
-        color: #000000;
-        border: none;
-        top: 0;
-        font-weight: bold;
-        position: relative; }
-        nav .maxwidth .navigation li a:after {
-          display: none; }
-        nav .maxwidth .navigation li a:before {
-          content: '';
-          display: block;
-          position: absolute;
-          transition: 0.2s;
-          width: 0%;
-          height: 3px;
-          background-color: #e62b1e;
-          left: 50%;
-          bottom: 0px; }
-        nav .maxwidth .navigation li a:hover {
-          border-right: none;
-          color: red; }
-          nav .maxwidth .navigation li a:hover:before {
-            width: 100%;
-            left: 0%; }
-      nav .maxwidth .navigation li .drop {
-        position: absolute;
-        top: 56px;
-        display: none;
-        background-color: #2D2D2D;
-        width: calc(100% + 60px);
-        color: white !important; }
-        nav .maxwidth .navigation li .drop:hover {
-          display: block !important; }
-        nav .maxwidth .navigation li .drop li:not(:last-child) {
-          border-bottom: 1px solid #58595B; }
-        nav .maxwidth .navigation li .drop li a {
-          color: white;
-          padding: 10px 15px;
-          text-indent: 0; }
-          nav .maxwidth .navigation li .drop li a:before {
-            content: '';
-            display: block;
-            position: absolute;
-            transition: 0.2s;
-            width: 3px;
-            height: 0;
-            background-color: #e62b1e;
-            right: 0%;
-            left: calc(100% - 3px);
-            top: 50%; }
-          nav .maxwidth .navigation li .drop li a:hover:before {
-            top: 0%;
-            height: 100%;
-            transition: 0.2s;
-            right: 0%; }
-      nav .maxwidth .navigation li a:hover + .drop {
-        display: block !important; } }
-
-::-webkit-selection {
-  background: rgba(230, 43, 30, 0.5);
-  color: white;
-  text-shadow: none; }
-
-::-moz-selection {
-  background: rgba(230, 43, 30, 0.5);
-  color: white;
-  text-shadow: none; }
-
-::-o-selection {
-  background: rgba(230, 43, 30, 0.5);
-  color: white;
-  text-shadow: none; }
-
-::-ms-selection {
-  background: rgba(230, 43, 30, 0.5);
-  color: white;
-  text-shadow: none; }
-
-::selection {
-  background: rgba(230, 43, 30, 0.5);
-  color: white;
-  text-shadow: none; }
-
-img::selection {
-  background: transparent; }
-
-img::-moz-selection {
-  background: transparent; }
-
-body {
-  -webkit-tap-highlight-color: rgba(230, 43, 30, 0.5); }
-
-a::selection {
-  color: #e62b1e; }
-ddress h4 {
         color: #e62b1e; }
       footer div.flex .address h4, footer div.flex .address a {
         line-height: 1.4em; }
@@ -666,12 +629,16 @@ ddress h4 {
             right: 0%;
             left: calc(100% - 3px);
             top: 50%; }
-          nav .maxwidth .navigation li .drop li a:hover:before {
-            top: 0%;
-            height: 100%;
+          nav .maxwidth .navigation li .drop li a:hover {
+            color: red;
             -webkit-transition: 0.2s;
-            transition: 0.2s;
-            right: 0%; }
+            transition: 0.2s; }
+            nav .maxwidth .navigation li .drop li a:hover:before {
+              top: 0%;
+              height: 100%;
+              -webkit-transition: 0.2s;
+              transition: 0.2s;
+              right: 0%; }
       nav .maxwidth .navigation li a:hover + .drop {
         display: block !important; } }
 

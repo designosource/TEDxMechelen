@@ -723,6 +723,9 @@ footer {
                                 
                                 &:hover {
                                     
+                                    color: red;
+                                    transition: 0.2s;
+                                    
                                     &:before {
                                         top: 0%;
                                         height: 100%;
