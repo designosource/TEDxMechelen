@@ -52,13 +52,22 @@
         justify-content: space-around;
     }
 
-    .introSmall{
-        display: flex;
-        justify-content: safe;
-        align-items: center;
-        margin-bottom: 30px;
+    .introImg{
+
     }
 
+    .introText{
+    }
+
+    .introSmall{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .introBig{
+
+    }
     .introSmallName{
         margin-right: 30px;
     }
