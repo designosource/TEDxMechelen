@@ -39,6 +39,11 @@ body{
     }
 }
 
+#ted .maxwidth a {
+    color: #e62b1e;
+    font-weight: bold;
+}
+
 #information {
     background-color: $color--black;
     padding: $padding-s $padding;
@@ -253,7 +258,17 @@ nav {
 
 @media screen and (min-width: 820px){
 
-    .splitline.flex {
+  #ted .maxwidth p {
+      max-width: 1000px!important;
+      margin-bottom: 20px;
+  }
+
+  #tedx .maxwidth p {
+    max-width: 1000px!important;
+    margin-bottom: 20px;
+  }
+
+  .splitline.flex {
         flex-direction: row!important;
         flex-wrap: nowrap!important;
         padding-top: $padding-l!important;
@@ -288,6 +303,7 @@ nav {
 
 
     }
+
 }
 
 
