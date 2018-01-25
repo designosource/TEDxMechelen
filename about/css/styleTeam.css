@@ -1,0 +1,67 @@
+
+.teamMember{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.teamMails {
+    color: darkgray;
+    font-style: italic ;
+    margin: 0 0 0 0;
+}
+
+.teamTitle{
+    font-weight: bold;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin: 0 0 0 0;
+}
+
+.btn-team{
+    padding: 8px;
+    margin: 0 0 0 0 ;
+}
+
+.introImg{
+    flex-basis: 45%;
+}
+
+.introText{
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex-basis: 50%;
+    align-self: center;
+}
+
+.introBig{
+    flex-basis: 100%;
+
+}
+
+@media screen and (min-width: 820px) {
+    .teamMember{
+        padding-top: 40px;
+        padding-bottom: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .introSmall{
+        display: flex;
+        justify-content: safe;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .introSmallName{
+        margin-right: 30px;
+    }
+
+
+}
