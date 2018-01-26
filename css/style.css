@@ -31,6 +31,10 @@
   color: #e62b1e;
   background-color: white; }
 
+.btn-size{
+  width: 70% ;
+}
+
 body {
   color: #000000;
   font-family: Helvetica, sans-serif;
