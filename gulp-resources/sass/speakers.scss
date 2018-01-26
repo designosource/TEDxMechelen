@@ -1,0 +1,34 @@
+@import "components/_colors.scss";
+@import "components/_measures.scss";
+
+.speakers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    .carousel-item {
+        flex-basis: calc(100% - 20px);
+        margin: 10px 0;
+        
+        p
+        {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+@media screen and (min-width:600px)
+{
+    .speakers .carousel-item {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media screen and (min-width:1000px)
+{
+    .speakers .carousel-item {
+        flex-basis: calc(33.33% - 20px);
+    }
+}

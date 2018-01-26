@@ -1,4 +1,70 @@
-<!DOCTYPE html>
+<?php
+
+    function in_array_r($needle, $haystack, $strict = false) {
+        foreach ($haystack as $item) {
+            if (($strict ? $item === $needle : $item == $needle) || (is_array($item) && in_array_r($needle, $item, $strict))) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    $speakers = array(
+        "speaker1" => array(
+            "q" => "sander",
+            "name" => "full name",
+            "image" => "../img/hosts/Bram.png",
+            "job" => "job speaker",
+            "linkedin" => "http://www.linkedin/speaker",
+            "description" => "This is the description of a speaker.",
+        ),
+        "speaker2" => array(
+            "q" => "fullname",
+            "name" => "full name",
+            "image" => "../img/hosts/speaker.png",
+            "job" => "job speaker",
+            "linkedin" => "http://www.linkedin/speaker",
+            "description" => "This is the description of a speaker.",
+        ),
+        "speaker3" => array(
+            "q" => "fullname",
+            "name" => "full name",
+            "image" => "../img/hosts/speaker.png",
+            "job" => "job speaker",
+            "linkedin" => "http://www.linkedin/speaker",
+            "description" => "This is the description of a speaker.",
+        ),
+        "speaker4" => array(
+            "q" => "fullname",
+            "name" => "full name",
+            "image" => "../img/hosts/speaker.png",
+            "job" => "job speaker",
+            "linkedin" => "http://www.linkedin/speaker",
+            "description" => "This is the description of a speaker.",
+        ),
+        "speaker5" => array(
+            "q" => "fullname",
+            "name" => "full name",
+            "image" => "../img/hosts/speaker.png",
+            "job" => "job speaker",
+            "linkedin" => "http://www.linkedin/speaker",
+            "description" => "This is the description of a speaker.",
+        )
+    );
+
+    if( empty( $_GET['q'] ) ){
+        $title_speaker = array("0", "Speakers");
+    } elseif ( in_array_r("sander", $speakers) )
+    {
+        // nog checken in welke array deze zit
+        $title_speaker = array("1", "De spreker");
+    } else
+    {
+        $title_speaker = array("2", "Unknown speaker");
+    }
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     
@@ -50,7 +116,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default-translucent">
     <meta name="apple-touch-fullscreen" content="yes">-->
 
-    <title>Partners | TEDx Mechelen</title>
+    <title><?php echo $title_speaker[1] . " | " ?>TEDx Mechelen</title>
 
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
@@ -64,7 +130,7 @@
    
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/partners.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/speakers.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
     <script src="https://use.fontawesome.com/f2a9d011c6.js"></script>
@@ -105,115 +171,78 @@
         </div>
 
         <ul class="navigation flex animated fadeInRight">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li>
                 <a href="#" class="dropdown">About</a>
                 <ul class="drop">
-                    <li><a href="about/tedxandted.html">TEDx &amp; TED</a></li>
-                    <li><a href="about/team.html">Team</a></li>
+                    <li><a href="../about/tedxandted.html">TEDx &amp; TED</a></li>
+                    <li><a href="../about/team.html">Team</a></li>
                 </ul>
             </li>
             <li>
                 <a href="#" class="dropdown">Event</a>
                 <ul class="drop">
-                    <li><a href="event/schedule.html">Schedule</a></li>
-                    <li><a href="event/speakers.php">Speakers</a></li>
-                    <li><a href="event/revolution.html">Revolution</a></li>
+                    <li><a href="../event/schedule.html">Schedule</a></li>
+                    <li><a href="../event/speakers.php">Speakers</a></li>
+                    <li><a href="../event/revolution.html">Revolution</a></li>
                 </ul>
             </li>
-            <li><a href="partners.html">Partners</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="../partners.html">Partners</a></li>
+            <li><a href="../contact.html">Contact</a></li>
         </ul>
     </div>
 </nav>
 
-
-<section id="partners">
+<section id="speaker">
     <div class="maxwidth">
-        
-        <h3 class="title--line">Partners</h3>
-        
-        <div class="partnerscontainer">
-            <div class="partneritem">
-                <div class="partnerimage"></div>
-                <p class="all-caps">Partner 1</p>
-                <a href="" class="partnerarrow">
-                    More information
-                    <br>
-                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                </a>
+
+        <?php if( $title_speaker[0] == 0 ): /* 0 = geen GET --> laat alle sprekers zien */?>
+
+        <h3 class="title--line">Speakers</h3>
+
+        <div class="speakers">
+
+            <?php foreach ( $speakers as $speaker ): ?>
+
+            <div class="carousel-item">
+                <div class="bg-img bg-img-x flex">
+                    <img src="<?php echo $speaker["image"]; ?>" alt="Photo of <?php echo $speaker["name"]; ?>">
+                </div>
+                <a href="speakers.php?q=<?php echo $speaker["q"]; ?>" class="btn btn-regular all-caps"><?php echo $speaker["name"]; ?></a>
+                <div class="carousel-item-speaker">
+                    <p class="quote"></p>
+                    <p class="role"><?php echo $speaker["job"]; ?></p>
+                </div>
+                <a class="link--red" href="speakers.php?q=<?php echo $speaker["q"]; ?>">More about <?php echo $speaker["name"]; ?><br><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
             </div>
-            <div class="partneritem">
-                <div class="partnerimage"></div>
-                <p class="all-caps">Partner 2</p>
-                <a href="" class="partnerarrow">
-                    More information
-                    <br>
-                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                </a>
-            </div>
-            <div class="partneritem">
-                <div class="partnerimage"></div>
-                <p class="all-caps">Partner 3</p>
-                <a href="" class="partnerarrow">
-                    More information
-                    <br>
-                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                </a>
-            </div>
-            <div class="partneritem">
-                <div class="partnerimage"></div>
-                <p class="all-caps">Partner 4</p>
-                <a href="" class="partnerarrow">
-                    More information
-                    <br>
-                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                </a>
-            </div>
-            <div class="partneritem">
-                <div class="partnerimage"></div>
-                <p class="all-caps">Partner 5</p>
-                <a href="" class="partnerarrow">
-                    More information
-                    <br>
-                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                </a>
-            </div>
-            <div class="partneritem">
-                <div class="partnerimage"></div>
-                <p class="all-caps">Partner 6</p>
-                <a href="" class="partnerarrow">
-                    More information
-                    <br>
-                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                </a>
-            </div>
-            <div class="partneritem">
-                <div class="partnerimage"></div>
-                <p class="all-caps">Partner 7</p>
-                <a href="" class="partnerarrow">
-                    More information
-                    <br>
-                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                </a>
-            </div>
-            <div class="partneritem">
-                <div class="partnerimage"></div>
-                <p class="all-caps">Partner 8</p>
-                <a href="" class="partnerarrow">
-                    More information
-                    <br>
-                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                </a>
-            </div>
+
+            <?php endforeach; ?>
+
         </div>
-        
-        
-    
-    </div> <!-- end maxwidth -->
+
+        <!-- einde van alle sprekers -->
+
+        <?php elseif( $title_speaker[0] == 2 ): /* 2 = GET van een onbestaande spreker  --> foutafhandeling */?>
+
+        <h3 class="title--line">Unknown speaker</h3>
+
+        <p>The speaker you are refering to does not exist or is nog coming to TEDx Mechelen.</p>
+
+        <p>Learn more about these speakers:</p>
+
+        <?php elseif( $title_speaker[0] == 1 ): /* 1 = GET van een bestaande spreker --> laat deze gegevens zien */ ?>
+
+        <!-- check welke speaker dit is -->
+
+        <h3 class="title--line">Speakernaam</h3>
+
+        <!-- speakerinformatie komt hier-->
+
+        <?php endif; ?>
+
+
+    </div>
 </section>
-
-
 
 <footer>
     <div class="maxwidth">
