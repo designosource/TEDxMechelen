@@ -1,56 +1,77 @@
 <?php
 
-    $speakers = array(
-        "speaker1" => array(
-            "q" => "fullname",
-            "name" => "full name",
-            "image" => "img/hosts/speaker.png",
-            "job" => "job speaker",
-            "linkedin" => "http://www.linkedin/speaker",
-            "description" => "This is the description of a speaker.",
-        ),
-        "speaker2" => array(
-            "q" => "fullname",
-            "name" => "full name",
-            "image" => "img/hosts/speaker.png",
-            "job" => "job speaker",
-            "linkedin" => "http://www.linkedin/speaker",
-            "description" => "This is the description of a speaker.",
-        ),
-        "speaker3" => array(
-            "q" => "fullname",
-            "name" => "full name",
-            "image" => "img/hosts/speaker.png",
-            "job" => "job speaker",
-            "linkedin" => "http://www.linkedin/speaker",
-            "description" => "This is the description of a speaker.",
-        ),
-        "speaker4" => array(
-            "q" => "fullname",
-            "name" => "full name",
-            "image" => "img/hosts/speaker.png",
-            "job" => "job speaker",
-            "linkedin" => "http://www.linkedin/speaker",
-            "description" => "This is the description of a speaker.",
-        ),
-        "speaker5" => array(
-            "q" => "fullname",
-            "name" => "full name",
-            "image" => "img/hosts/speaker.png",
-            "job" => "job speaker",
-            "linkedin" => "http://www.linkedin/speaker",
-            "description" => "This is the description of a speaker.",
-        )
-    );
+function in_array_r($needle, $haystack, $strict = false) {
+    foreach ($haystack as $item) {
+        if (($strict ? $item === $needle : $item == $needle) || (is_array($item) && in_array_r($needle, $item, $strict))) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+$speakers = array(
+    "speaker1" => array(
+        "q" => "sander",
+        "name" => "full name",
+        "image" => "../img/hosts/Bram.png",
+        "job" => "job speaker",
+        "linkedin" => "http://www.linkedin/speaker",
+        "description" => "This is the description of a speaker.",
+    ),
+    "speaker2" => array(
+        "q" => "fullname",
+        "name" => "full name",
+        "image" => "../img/hosts/speaker.png",
+        "job" => "job speaker",
+        "linkedin" => "http://www.linkedin/speaker",
+        "description" => "This is the description of a speaker.",
+    ),
+    "speaker3" => array(
+        "q" => "fullname",
+        "name" => "full name",
+        "image" => "../img/hosts/speaker.png",
+        "job" => "job speaker",
+        "linkedin" => "http://www.linkedin/speaker",
+        "description" => "This is the description of a speaker.",
+    ),
+    "speaker4" => array(
+        "q" => "fullname",
+        "name" => "full name",
+        "image" => "../img/hosts/speaker.png",
+        "job" => "job speaker",
+        "linkedin" => "http://www.linkedin/speaker",
+        "description" => "This is the description of a speaker.",
+    ),
+    "speaker5" => array(
+        "q" => "fullname",
+        "name" => "full name",
+        "image" => "../img/hosts/speaker.png",
+        "job" => "job speaker",
+        "linkedin" => "http://www.linkedin/speaker",
+        "description" => "This is the description of a speaker.",
+    )
+);
+
+if( empty( $_GET['q'] ) ){
+    $title_speaker = array("0", "Speakers");
+} elseif ( in_array_r("sander", $speakers, true) )
+{
+    // nog checken in welke array deze zit
+    $title_speaker = array("1", "De spreker");
+} else
+{
+    $title_speaker = array("2", "Unknown speaker");
+}
 
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
-    
-<!-- GOOGLE ANALYTICS SCRIPT -->
-    
-<!-- END GOOGLE ANALYTICS SCRIPT -->
-    
+
+    <!-- GOOGLE ANALYTICS SCRIPT -->
+
+    <!-- END GOOGLE ANALYTICS SCRIPT -->
+
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -95,7 +116,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default-translucent">
     <meta name="apple-touch-fullscreen" content="yes">-->
 
-    <title>TEDx Mechelen</title>
+    <title><?php echo $title_speaker[1] . " | " ?>TEDx Mechelen</title>
 
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
@@ -106,23 +127,24 @@
 
     <!-- Animate.css -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
-   
+
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/speakers.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
     <script src="https://use.fontawesome.com/f2a9d011c6.js"></script>
-    
+
 </head>
 
 <body>
 
 <section id="information">
-    
+
     <div class="maxwidth flex">
-        
+
         <p class="animated fadeInLeft">23 maart 2018 - Thomas More: Creativity Gym</p>
-        
+
         <div class="information--socials animated fadeInRight">
             <a target="_blank" href="https://www.facebook.com/TEDxMechelen/">
                 <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
@@ -131,9 +153,9 @@
                 <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
             </a>
         </div>
-        
+
     </div><!-- end maxwidth -->
-    
+
 </section>
 
 <nav>
@@ -148,7 +170,7 @@
             </div>
         </div>
 
-        <ul class="navigation flex animated fadeInRight">
+        <ul class="navigation flex">
             <li><a href="../index.html">Home</a></li>
             <li>
                 <a href="#" class="dropdown">About</a>
@@ -172,33 +194,74 @@
 </nav>
 
 <section id="speaker">
+    <div class="maxwidth">
 
-<!-- begin insertion of php -->
+        <?php if( $title_speaker[0] == 0 ): /* 0 = geen GET --> laat alle sprekers zien */?>
 
-<?php if( !empty($_SESSION['q']) ): ?>
+            <h3 class="title--line animated fadeInLeft">Speakers</h3>
 
-    <h3 class="title--line">Speakers</h3>
-    
-    <!-- alle speakers komen hier-->
+            <div class="speakers">
 
-<?php elseif( (in_array($_SESSION['q'], $speakers) ): ?>
+                <?php foreach ( $speakers as $speaker ): ?>
 
-    <!-- check welke speaker dit is -->
-    
-    <h3 class="title--line">Speakernaam</h3>
-    
-    <!-- speakerinformatie komt hier-->
-  
-<?php else: ?>
+                    <div class="carousel-item">
+                        <div class="bg-img bg-img-x flex">
+                            <img src="<?php echo $speaker["image"]; ?>" alt="Photo of <?php echo $speaker["name"]; ?>">
+                        </div>
+                        <a href="speakers.php?q=<?php echo $speaker["q"]; ?>" class="btn btn-regular all-caps"><?php echo $speaker["name"]; ?></a>
+                        <div class="carousel-item-speaker">
+                            <p class="quote"></p>
+                            <p class="role"><?php echo $speaker["job"]; ?></p>
+                        </div>
+                        <a class="link--red" href="speakers.php?q=<?php echo $speaker["q"]; ?>">More about <?php echo $speaker["name"]; ?><br><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                    </div>
 
-    <h3 class="title--line">Unknown speaker</h3>
-    
-    <p>The speaker you are refering to does not exist or is nog coming to TEDx Mechelen.</p>
-    
-<?php endif; ?>
+                <?php endforeach; ?>
 
-<!-- end insertion of php -->
+            </div>
 
+            <!-- einde van alle sprekers -->
+
+        <?php elseif( $title_speaker[0] == 2 ): /* 2 = GET van een onbestaande spreker  --> foutafhandeling */?>
+
+            <h3 class="title--line animated fadeInLeft">Unknown speaker "<?php $_GET['q'] ?>"</h3>
+
+            <p>The speaker you are refering to does not exist or is nog coming to TEDx Mechelen.</p>
+
+            <p>Learn more about these speakers:</p>
+
+            <div class="speakers">
+
+                <?php foreach ( $speakers as $speaker ): ?>
+
+                    <div class="carousel-item">
+                        <div class="bg-img bg-img-x flex">
+                            <img src="<?php echo $speaker["image"]; ?>" alt="Photo of <?php echo $speaker["name"]; ?>">
+                        </div>
+                        <a href="speakers.php?q=<?php echo $speaker["q"]; ?>" class="btn btn-regular all-caps"><?php echo $speaker["name"]; ?></a>
+                        <div class="carousel-item-speaker">
+                            <p class="quote"></p>
+                            <p class="role"><?php echo $speaker["job"]; ?></p>
+                        </div>
+                        <a class="link--red" href="speakers.php?q=<?php echo $speaker["q"]; ?>">More about <?php echo $speaker["name"]; ?><br><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+
+                <?php endforeach; ?>
+
+            </div>
+
+        <?php elseif( $title_speaker[0] == 1 ): /* 1 = GET van een bestaande spreker --> laat deze gegevens zien */ ?>
+
+            <!-- check welke speaker dit is -->
+
+            <h3 class="title--line animated fadeInLeft">Speakernaam</h3>
+
+            <!-- speakerinformatie komt hier-->
+
+        <?php endif; ?>
+
+
+    </div>
 </section>
 
 <footer>
@@ -235,23 +298,23 @@
                 </div>
             </div>
         </div> <!-- end flex container-->
-        
+
         <div class="copyright flex">
-            
+
             <p>This independant TEDx event is operated under license from TED</p>
             <p>Powered by <a href="www.designosource.be">Designosource</a></p>
-            
+
         </div>
-        
+
     </div> <!-- end maxwidth -->
 </footer>
 
 <!-- SCRIPTS -->
-    <!-- Implement jQuery-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/jquery.viewportchecker.js"></script>
+<!-- Implement jQuery-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.viewportchecker.js"></script>
 <script type="text/javascript" src="js/slick.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <!-- END SCRIPTS -->
