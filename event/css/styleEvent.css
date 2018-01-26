@@ -1,3 +1,46 @@
 #Revolution .maxwidth p {
     max-width: 1000px;
 }
+
+
+.timeline {
+    width: 80%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 30%;
+    bottom: 186px;
+    width: 4px;
+    background: black;
+}
+
+.entry .body h1{
+    text-align: center;
+}
+
+.entry {
+    text-align: left;
+    display: flex;
+}
+.entry .title {
+    width: 33%;
+}
+
+.entry .title h3 {
+    margin: 0;
+    font-size: 120%;
+}
+
+.entry .body {
+    padding-bottom: 100px;
+}
+
+.entry .body p:first-child {
+    margin-top: 0;
+    font-weight: 400;
+}
