@@ -4,7 +4,12 @@
     padding-bottom: 40px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+    border-bottom: 2px solid lightgrey;
+}
 
+.teamMemberFlip .introText{
+    justify-content: flex-start;
 }
 
 .teamMails {
@@ -39,24 +44,56 @@
 }
 
 .introBig{
-    flex-basis: 100%;
+    margin-top: 30px;
 
 }
 
-@media screen and (min-width: 820px) {
-    .teamMember{
-        padding-top: 40px;
-        padding-bottom: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
+@media screen and (max-width: 500px){
+
+    .teamMemberFlip .introText{
+        order:2;
     }
 
-    .introImg{
+    .teamMemberFlip .introImg{
+        order:1;
+    }
 
+    .teamMemberFlip .introBig{
+        order:3;
+    }
+}
+
+@media screen and (min-width: 620px){
+
+    .introImg{
+        flex-basis: unset;
     }
 
     .introText{
+        flex-basis: unset;
+    }
+
+    .introBig{
+        padding-top: 30px;
+    }
+
+}
+
+@media screen and (min-width: 740px) {
+
+    .introImg{
+        grid-column: 1;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .introText{
+        flex-basis: unset;
+        grid-column: 2;
+        grid-row: 1;
+        align-self: start;
+        justify-self: start;
+        padding-top: unset;
     }
 
     .introSmall{
@@ -66,11 +103,41 @@
     }
 
     .introBig{
-
+        grid-column: 2;
+        grid-row: 1;
+        align-self: end;
+        justify-self: start;
     }
+
     .introSmallName{
         margin-right: 30px;
     }
 
+    .teamMember {
+        display: grid;
+        grid-template-columns: 33% 1fr;
+        grid-template-rows: none;
+    }
+
+    .teamMemberFlip{
+        display: grid;
+        grid-template-columns: 1fr 33% !important;
+        grid-template-rows: none;
+    }
+
+    .teamMemberFlip .introText{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .teamMemberFlip .introImg{
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .teamMemberFlip .introBig{
+        grid-column: 1;
+        grid-row: 1;
+    }
 
 }
