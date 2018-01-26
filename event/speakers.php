@@ -160,7 +160,7 @@ if( empty( $_GET['q'] ) ){
 
 <nav>
     <div class="maxwidth flex">
-        <a href="#information"><img id="logo" class="animated fadeInLeft" src="img/logo.png" alt="Logo TEDx Mechelen"/></a>
+        <a href="../index.html"><img id="logo" class="animated fadeInLeft" src="img/logo.png" alt="Logo TEDx Mechelen"/></a>
 
         <div class="hamburger-menu-container">
             <div class="hamburger-menu animated fadeInRight">
@@ -273,12 +273,12 @@ if( empty( $_GET['q'] ) ){
 
             <div>
                 <ul class="flex">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Event</a></li>
-                    <li><a href="#">Partners</a></li>
-                    <li><a href="#">Join us</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about/tedxandted.html">About</a></li>
+                    <li><a href="schedule.html">Event</a></li>
+                    <li><a href="../partners.html">Partners</a></li>
+                    <li><a href="../joinus.html">Join us</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
                 </ul>
             </div>
 
