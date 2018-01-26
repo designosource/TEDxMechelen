@@ -1,0 +1,90 @@
+@import "components/_colors.scss";
+@import "components/_measures.scss";
+
+#partners {
+    .partnerscontainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        
+        .partneritem {
+            flex-basis: 100%;
+            margin: $margin-s;
+            padding: $padding;
+            box-sizing: border-box;
+        
+            &:hover
+            {
+                .partnerimage {
+                    filter: grayscale(0);
+                    transition: 0.2s;
+                }
+                
+                i {
+                    text-indent: calc(#{$padding} + #{$padding});
+                    transition: 0.5s;
+                }
+            }
+        
+            .partnerimage {
+                background-image: url('');
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                filter: grayscale(0.5);
+                transition: 0.2s;
+                width: 100px;
+                height: 100px;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: red;
+            }
+        
+            p {
+                margin: $margin 0;
+                text-align: center;
+                font-weight: bold;
+                min-height: 2.4em;
+            }
+        
+            a {
+                display: block;
+                text-align: center;
+                color: red;
+                //position: relative;
+                
+                i {
+                    margin-top: $margin-s;
+                    transition: 0.5s;
+                }
+            }
+        
+        }
+        
+    }
+}
+
+@media screen and (min-width:500px){
+
+    #partners {
+        .partnerscontainer {
+           
+            .partneritem {
+                flex-basis: calc(50% - #{$margin-s} - #{$padding});
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1000px){
+
+    #partners {
+        .partnerscontainer {
+           
+            .partneritem {
+                flex-basis: calc(25% - #{$margin-s} - #{$padding});
+            }
+        }
+    }
+}

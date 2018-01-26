@@ -32,15 +32,15 @@
     margin-left: 0; }
 
 @media screen and (min-width: 700px) {
-  .flexrow {
+  #joinus .flexrow {
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
-    .flexrow .flex {
+    #joinus .flexrow .flex {
       flex-basis: calc(50% - 20px); }
-    .flexrow .flexrow-inner {
+    #joinus .flexrow .flexrow-inner {
       flex-basis: calc(50% - 20px); }
-    .flexrow .flexcontainer {
+    #joinus .flexrow .flexcontainer {
       display: flex;
       flex-direction: row;
       flex-basis: calc(50% - 20px); } }
