@@ -60,24 +60,25 @@
 }
 
 @media screen and (min-width: 700px){
-#joinus {    
-    .flexrow {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        
-        .flex {
-            flex-basis: calc(50% - #{$margin});
-        }
-        
-        .flexrow-inner {
-            flex-basis: calc(50% - #{$margin});
-        }
-        
-        .flexcontainer {
+    #joinus {    
+        .flexrow {
             display: flex;
             flex-direction: row;
-            flex-basis: calc(50% - #{$margin});
+            justify-content: space-between;
+
+            .flex {
+                flex-basis: calc(50% - #{$margin});
+            }
+
+            .flexrow-inner {
+                flex-basis: calc(50% - #{$margin});
+            }
+
+            .flexcontainer {
+                display: flex;
+                flex-direction: row;
+                flex-basis: calc(50% - #{$margin});
+            }
         }
     }
 }
