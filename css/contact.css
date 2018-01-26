@@ -9,12 +9,27 @@
       height: 100%; }
   #contact .flex form {
     height: auto;
-    max-width: 750px; }
+    max-width: 800px; }
     #contact .flex form .flex {
       width: 100%; }
     #contact .flex form .flexrow {
       width: 100%;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      #contact .flex form .flexrow input {
+        flex-basis: calc(50% - 20px);
+        max-width: calc(50% - 20px);
+        box-sizing: border-box; }
+      #contact .flex form .flexrow input, #contact .flex form .flexrow textarea {
+        border: 0;
+        border-bottom: 1px solid #2D2D2D;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 16px; }
+      #contact .flex form .flexrow .flexwidth {
+        flex-basis: 100%; }
       #contact .flex form .flexrow .flexcontainer {
         display: flex;
         flex-direction: row;
@@ -42,4 +57,4 @@
     flex-direction: row;
     justify-content: space-between; }
     #contact .flex .flex-element {
-      flex-basis: calc(50% - 20px - 20px - 20px - 20px); } }
+      flex-basis: calc(50% - 20px); } }

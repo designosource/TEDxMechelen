@@ -136,70 +136,24 @@
         <div class="flex">
 
             <div class="maps flex-element">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2509.5197996003008!2d4.481654149740974!3d51.02501965358031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3e5cc87d28e87%3A0xa472dbc683538fd3!2sLange+Ridderstraat%2C+2800+Mechelen!5e0!3m2!1snl!2sbe!4v1516897799214"  frameborder="0" style="border:0" allowfullscreen></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1254.7664058244727!2d4.483687858224667!3d51.024779294889704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3e5cc91b66e43%3A0x61b5c485972acffc!2sThomas+More+Mechelen+-+Campus+Kruidtuin!5e0!3m2!1snl!2sbe!4v1516970617841"></iframe>
             </div>
 
             <div class="flex-element">
-                <form action="https://formspree.io/info@tedxmechelen.be" method="post">
+                <form target="_blank" action="https://formspree.io/info@tedxmechelen.be" method="post">
 
                     <div class="flexrow">
-                        <div class="flex">
-                            <label for="organisation" class="all-caps">Organisation</label>
-                            <input type="text" id="organisation" name="organisation">
-                        </div>
+                            <input type="text" id="subject" name="subject" placeholder="Subject">
+                            <input type="text" id="name" name="name" placeholder="Name">
                     </div>
 
                     <div class="flexrow">
-                        <div class="flexrow-inner flex">
-                            <label for="lastname" class="all-caps">Last name *</label>
-                            <input type="text" id="lastname" name="lastname" required>
-                        </div>
-
-                        <div class="flexrow-inner flex">
-                            <label for="name" class="all-caps">Name *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
+                            <input class="flexwidth" type="text" id="email" name="email" placeholder="Email">
                     </div>
 
                     <div class="flexrow">
-                        <div class="flexrow-inner flex">
-                            <label for="address" class="all-caps">Address *</label>
-                            <input type="text" id="address" name="address" required>
-                        </div>
-
-                        <div class="flexrow-inner flexcontainer">
-                            <div class="flex">
-                                <label for="number" class="all-caps">Number *</label>
-                                <input type="text" id="number" name="number" maxlength="12" required>
-                            </div>
-
-                            <div class="flex">
-                                <label for="postalcode" class="all-caps">Postalcode *</label>
-                                <input type="text" id="postalcode" name="postalcode" maxlength="4" required>
-                            </div>
-                        </div>   
+                        <textarea class="flexwidth" type="text" id="Message" name="Message" placeholder="Message" rows="8"></textarea>
                     </div>
-
-                    <div class="flexrow">
-                        <div class="flex">
-                            <label for="city" class="all-caps">City</label>
-                            <input type="text" id="city" name="city">
-                        </div>
-                    </div>
-
-                    <div class="flexrow">
-                        <div class="flex">
-                            <label for="email" class="all-caps">Email</label>
-                            <input type="text" id="email" name="email">
-                        </div>
-
-                        <div class="flex">
-                            <label for="phone" class="all-caps">Phone</label>
-                            <input type="text" id="phone" name="phone">
-                        </div>
-                    </div>
-
-                    <p class="red">* All fields are required</p>
 
                     <!--<div class="g-recaptcha" data-sitekey="6Lcjf0IUAAAAACt1vu_bVH3BGt1R8Y3vs8vxaYZA"></div>-->
 

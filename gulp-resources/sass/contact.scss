@@ -18,7 +18,7 @@
         
         form {
             height: auto;
-            max-width: 750px;
+            max-width: 800px;
 
             .flex {
                 width: 100%;
@@ -27,6 +27,27 @@
             .flexrow {
                 width: 100%;
                 margin-bottom: $margin;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                
+                input {
+                    flex-basis: calc(50% - #{$margin});
+                    max-width: calc(50% - #{$margin});
+                    box-sizing: border-box;
+                }
+                
+                input, textarea {
+                    border: 0;
+                    border-bottom: 1px solid $color--gray;
+                    padding: $padding-s;
+                    box-sizing: border-box;
+                    font-size: $information;
+                }
+                
+                .flexwidth {
+                    flex-basis: 100%;
+                }
 
                 .flexcontainer {
                     display: flex;
@@ -76,7 +97,7 @@
             justify-content: space-between;
             
             .flex-element {
-                flex-basis: calc(50% - #{$margin} - #{$margin} - #{$margin} - #{$margin});
+                flex-basis: calc(50% - #{$margin};
             }
         }
     }
