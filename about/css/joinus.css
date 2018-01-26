@@ -1,0 +1,72 @@
+#joinus p {
+  font-weight: bold; }
+
+#joinus form {
+  height: auto;
+  max-width: 750px; }
+  #joinus form .flex {
+    width: 100%; }
+  #joinus form .flexrow {
+    width: 100%;
+    margin-bottom: 20px; }
+    #joinus form .flexrow .flexcontainer {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+      #joinus form .flexrow .flexcontainer .flex {
+        -ms-flex-preferred-size: calc(50% - 10px);
+        flex-basis: calc(50% - 10px); }
+    #joinus form .flexrow .flex {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      margin-bottom: 10px; }
+      #joinus form .flexrow .flex label {
+        margin-bottom: 10px;
+        color: #e62b1e; }
+      #joinus form .flexrow .flex input {
+        padding: 10px;
+        border: 1px solid #58595B; }
+  #joinus form .red {
+    color: #e62b1e; }
+  #joinus form .g-recaptcha {
+    margin-bottom: 20px; }
+  #joinus form .btn {
+    margin-left: 0; }
+
+@media screen and (min-width: 700px) {
+  #joinus .flexrow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    #joinus .flexrow .flex {
+      -ms-flex-preferred-size: calc(50% - 20px);
+      flex-basis: calc(50% - 20px); }
+    #joinus .flexrow .flexrow-inner {
+      -ms-flex-preferred-size: calc(50% - 20px);
+      flex-basis: calc(50% - 20px); }
+    #joinus .flexrow .flexcontainer {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -ms-flex-preferred-size: calc(50% - 20px);
+      flex-basis: calc(50% - 20px); } }

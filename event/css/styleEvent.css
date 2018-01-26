@@ -2,45 +2,74 @@
     max-width: 1000px;
 }
 
-
 .timeline {
     width: 80%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-.timeline:before {
-    content: '';
-    position: absolute;
-    top: 30px;
-    left: 30%;
-    bottom: 186px;
-    width: 4px;
-    background: black;
+    min-width: 400px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.entry .body h1{
+.timeline .item {
+    display: flex;
+    flex-direction: row;
+}
+
+.timeline .item .entry {
+    padding: 0 20px;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeline .item .entry h4 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.timeline .item .information {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.timeline .item .information:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 4px;
+    height: 100%;
+    left: -2px;
+    background-color: black;
+}
+
+.timeline .item .information .type {
+    margin-top: 0;
+    margin-left: 0;
+    height: 5em;
+    padding: 0 30px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeline .item .information .type p {
+    margin-bottom: 0;
+    font-size: 24px;
     text-align: center;
 }
 
-.entry {
-    text-align: left;
-    display: flex;
-}
-.entry .title {
-    width: 33%;
+.timeline .item .information .description {
+    margin-left: 20px;
 }
 
-.entry .title h3 {
-    margin: 0;
-    font-size: 120%;
+@media screen and (min-width: 650px) {
+    
+    .timeline .item .information {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
-.entry .body {
-    padding-bottom: 100px;
-}
-
-.entry .body p:first-child {
-    margin-top: 0;
-    font-weight: 400;
-}

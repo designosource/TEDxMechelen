@@ -51,8 +51,8 @@ gulp.task('imagesDefault', () =>
         .pipe(imagemin())
         .pipe(plumber.stop())
         .pipe(gulp.dest('img/'))
-        .pipe(gulp.dest('about/img/'))
-        .pipe(gulp.dest('event/img/'))
+        //.pipe(gulp.dest('about/img/'))
+        //.pipe(gulp.dest('event/img/'))
 );
 
 gulp.task('imagesHosts', () =>

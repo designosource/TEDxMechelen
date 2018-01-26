@@ -52,12 +52,11 @@
                 display: block;
                 text-align: center;
                 color: $color--red;
-                //position: relative;
-                
-                i {
-                    margin-top: $margin-s;
-                    transition: 0.5s;
-                }
+            }
+            
+            i {
+                margin-top: $margin-s;
+                transition: 0.5s;
             }
         
         }
