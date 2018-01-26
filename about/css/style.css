@@ -62,6 +62,11 @@ body {
   color: #e62b1e;
   font-weight: bold; }
 
+.introTeam {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 #information {
   background-color: #000000;
   padding: 10px 20px; }

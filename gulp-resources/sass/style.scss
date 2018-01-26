@@ -44,6 +44,10 @@ body{
     font-weight: bold;
 }
 
+.introTeam{
+  display: flex;
+}
+
 #information {
     background-color: $color--black;
     padding: $padding-s $padding;
