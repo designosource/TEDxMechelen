@@ -1,68 +1,121 @@
 <?php
 
-function in_array_r($needle, $haystack, $strict = false) {
-    foreach ($haystack as $item) {
-        if (($strict ? $item === $needle : $item == $needle) || (is_array($item) && in_array_r($needle, $item, $strict))) {
-            return true;
+    function in_array_r($needle, $haystack, $strict = false) {
+        foreach ($haystack as $item) {
+            if (($strict ? $item === $needle : $item == $needle) || (is_array($item) && in_array_r($needle, $item, $strict))) {
+                return true;
+            }
         }
+
+        return false;
     }
 
-    return false;
-}
+    $speakers = array(
+        "bram" => array(
+            "q" => "bram",
+            "name" => "Bram Vanderborght",
+            "image" => "../img/hosts/Bram.png",
+            "job" => "Professor robotics @ VUB",
+            "linkedin" => "http://www.linkedin/speaker",
+            "description" => "<p>Bram Vanderborght is an absolute authority in the field of robotics. The top researcher has a master’s degree in mechanical engineering at the Vrije University of Brussels (VUB) with the highest distinction, and received his doctorate in applied sciences in 2007.</p><p>Vanderborght conducted research at the Italian Institute of Technology in Genova, the Babes-Bolyai University Cluj-Napoca (Romania), and Japanese / French robo- tics laboratory in Tsukuba (Japan)</p>.
+            <p>Recently, his research on self-healing robots are still getting attention in the national media. His research interests include cognitive and physical human robot interaction, robot-assisted therapy, humanoids and rehabilitation robotics such as exoskeletons.</p>",
+        ),
+        "geert" => array(
+            "q" => "geert",
+            "name" => "Geert Vanwonterghem",
+            "image" => "../img/hosts/Geert.png",
+            "job" => "Founding partner @ MeetMatch",
+            /*"linkedin" => "http://www.linkedin/speaker",*/
+            "description" => "<p>He has been many things in his life: a fanatic software develo- per, an innovation manager, a professor, ... But first & fore- most, he is and will always be an entrepreneur. He loves everything about innovation, has done a lot of innovating him- self and has spent a lot of time sparring with people on how to organize innovation within their company.</p>
+            <p>He also loves change projects. To guide people in new directi- ons and see it happen.</p>",
+        ),
+        "lidewij" => array(
+            "q" => "lidewij",
+            "name" => "Lidewij Nuitten",
+            "image" => "../img/hosts/Lidewij.png",
+            "job" => "Televisiemaakster @ VRT",
+            "linkedin" => "https://www.linkedin.com/in/lidewij-nuitten-0681a546/",
+            "description" => "<p>Lidewij Nuitten is a television maker, who is the past couple of years made numerous amount of very intriguing series. Nuitten studied journalism at the Erasmushogeschool Brussel, and did an internship at Brussels Week. Then she went to work for the VRT, and she made the now famous reporter series ‘Iedereen Beroemd’. ‘Always straight’ - in which she walked in a straight line from Limburg until the coast - and ‘De Laatstejaars’.</p>
+            <p>Her most recent work is ‘My Street’. Setup of this project was to interview as many of the people as possible in her very diverse street in Schaarbeek. Armed with 2 cameras she was able to capture the most fantastic stories.</p>",
+        ),
+        "nilesh" => array(
+            "q" => "nilesh",
+            "name" => "Nilesh Mahdu",
+            "image" => "../img/hosts/Nilesh.png",
+            "job" => "Professor @ University Ghent",
+            /*"linkedin" => "http://www.linkedin/speaker",*/
+            "description" => "<p>Nilesh Madhu is a researcher dedicated to speech technology and sound processing.</p>
+            <p>He is an engineer from training and a professor at the University from Ghent.</p>",
+        ),
+        "rik" => array(
+            "q" => "rik",
+            "name" => "Rik Vera",
+            "image" => "../img/hosts/Rik.png",
+            "job" => "CEO @ Nexxworx",
+            "linkedin" => "https://www.linkedin.com/in/rikvera/",
+            "description" => "<p>Having gathered years of C-level experience in sales and marketing related functions, he now inspires companies to develop customer-centric strategies fit for a connected world. Rik has given more than 350 keynote sessions around the world, in more than 15 countries, divided over 3 continents, to international pioneers like Assa Abloy, Cisco, Volvo, Swedbank, Telia, Baloise, Mastercard, Mundiphar- ma, Sogeti and Microsoft.</p>
+            <p>He is a renowned thought-leader, worldwide keynote spea- ker, acclaimed author and trusted advisor on the topics of extreme customer-centricity, disruption, business model change, sales, marketing and making companies ready for the Day After Tomorrow.</p>",
+        ),
+        "nico" => array(
+            "q" => "nico",
+            "name" => "Nico Huybrechts",
+            "image" => "../img/hosts/Nico.png",
+            "job" => "CEO @ dataSHIFT",
+            "linkedin" => "https://www.linkedin.com/in/nicohuybrechts/",
+            "description" => "<p>Entrepreneurial professional with a background in Data Management, Analytics and Business Intelligence. Co-founder of dataSHIFT. Convinced that everything can be measured. People, performance, success. Historically, currently, predictively.</p>
+            <p>His personal ambition is to make measuring motivational in order to lead to better business decisions and outcomes.</p>",
+        )
+    );
 
-$speakers = array(
-    "speaker1" => array(
-        "q" => "sander",
-        "name" => "full name",
-        "image" => "../img/hosts/Bram.png",
-        "job" => "job speaker",
-        "linkedin" => "http://www.linkedin/speaker",
-        "description" => "This is the description of a speaker.",
-    ),
-    "speaker2" => array(
-        "q" => "fullname",
-        "name" => "full name",
-        "image" => "../img/hosts/speaker.png",
-        "job" => "job speaker",
-        "linkedin" => "http://www.linkedin/speaker",
-        "description" => "This is the description of a speaker.",
-    ),
-    "speaker3" => array(
-        "q" => "fullname",
-        "name" => "full name",
-        "image" => "../img/hosts/speaker.png",
-        "job" => "job speaker",
-        "linkedin" => "http://www.linkedin/speaker",
-        "description" => "This is the description of a speaker.",
-    ),
-    "speaker4" => array(
-        "q" => "fullname",
-        "name" => "full name",
-        "image" => "../img/hosts/speaker.png",
-        "job" => "job speaker",
-        "linkedin" => "http://www.linkedin/speaker",
-        "description" => "This is the description of a speaker.",
-    ),
-    "speaker5" => array(
-        "q" => "fullname",
-        "name" => "full name",
-        "image" => "../img/hosts/speaker.png",
-        "job" => "job speaker",
-        "linkedin" => "http://www.linkedin/speaker",
-        "description" => "This is the description of a speaker.",
-    )
-);
-
-if( empty( $_GET['q'] ) ){
-    $title_speaker = array("0", "Speakers");
-} elseif ( in_array_r("sander", $speakers, true) )
-{
-    // nog checken in welke array deze zit
-    $title_speaker = array("1", "De spreker");
-} else
-{
-    $title_speaker = array("2", "Unknown speaker");
-}
+    if( empty( $_GET['q'] ) ){
+        $title_speaker = "Speakers";
+    }
+    elseif ( $_GET['q'] == "bram" || $_GET['q'] == "bramvanderborght" )
+    {
+        $information_speaker = $speakers["bram"];
+        $title_speaker = $information_speaker["name"];
+        $other_speakers = $speakers;
+        unset($other_speakers["bram"]);
+    }
+    elseif ( $_GET['q'] == "geert" || $_GET['q'] == "geertvanwonterghem" )
+    {
+        $information_speaker = $speakers["geert"];
+        $title_speaker = $information_speaker["name"];
+        $other_speakers = $speakers;
+        unset($other_speakers["geert"]);
+    }
+    elseif ( $_GET['q'] == "lidewij" || $_GET['q'] == "lidewijnuitten" )
+    {
+        $information_speaker = $speakers["lidewij"];
+        $title_speaker = $information_speaker["name"];
+        $other_speakers = $speakers;
+        unset($other_speakers["lidewij"]);
+    }
+    elseif ( $_GET['q'] == "nilesh" || $_GET['q'] == "nileshmahdu" )
+    {
+        $information_speaker = $speakers["nilesh"];
+        $title_speaker = $information_speaker["name"];
+        $other_speakers = $speakers;
+        unset($other_speakers["nilesh"]);
+    }
+    elseif ( $_GET['q'] == "rik" || $_GET['q'] == "rikvera" )
+    {
+        $information_speaker = $speakers["rik"];
+        $title_speaker = $information_speaker["name"];
+        $other_speakers = $speakers;
+        unset($other_speakers["rik"]);
+    }
+    elseif ( $_GET['q'] == "nico" || $_GET['q'] == "nicohuybrechts" )
+    {
+        $information_speaker = $speakers["nico"];
+        $title_speaker = $information_speaker["name"];
+        $other_speakers = $speakers;
+        unset($other_speakers["nico"]);
+    }
+    else
+    {
+        $title_speaker = "Unknown speaker";
+    }
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -116,7 +169,7 @@ if( empty( $_GET['q'] ) ){
     <meta name="apple-mobile-web-app-status-bar-style" content="default-translucent">
     <meta name="apple-touch-fullscreen" content="yes">-->
 
-    <title><?php echo $title_speaker[1] . " | " ?>TEDx Mechelen</title>
+    <title><?php echo $title_speaker . " | " ?>TEDx Mechelen</title>
 
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
@@ -196,7 +249,7 @@ if( empty( $_GET['q'] ) ){
 <section id="speaker">
     <div class="maxwidth">
 
-        <?php if( $title_speaker[0] == 0 ): /* 0 = geen GET --> laat alle sprekers zien */?>
+        <?php if( empty($_GET['q']) ): ?>
 
             <h3 class="title--line animated fadeInLeft">Speakers</h3>
 
@@ -222,9 +275,9 @@ if( empty( $_GET['q'] ) ){
 
             <!-- einde van alle sprekers -->
 
-        <?php elseif( $title_speaker[0] == 2 ): /* 2 = GET van een onbestaande spreker  --> foutafhandeling */?>
+        <?php elseif( empty($information_speaker) ): ?>
 
-            <h3 class="title--line animated fadeInLeft">Unknown speaker "<?php $_GET['q'] ?>"</h3>
+            <h3 class="title--line animated fadeInLeft">Unknown speaker "<?php echo $_GET['q']; ?>"</h3>
 
             <p>The speaker you are refering to does not exist or is nog coming to TEDx Mechelen.</p>
 
@@ -250,13 +303,67 @@ if( empty( $_GET['q'] ) ){
 
             </div>
 
-        <?php elseif( $title_speaker[0] == 1 ): /* 1 = GET van een bestaande spreker --> laat deze gegevens zien */ ?>
+        <?php else: ?>
 
-            <!-- check welke speaker dit is -->
+            <h3 class="title--line animated fadeInLeft"><?php echo $information_speaker['name']; ?></h3>
 
-            <h3 class="title--line animated fadeInLeft">Speakernaam</h3>
+            <div class="single-speaker speakers">
 
-            <!-- speakerinformatie komt hier-->
+                <div class="carousel-item">
+                    <div class="bg-img bg-img-x flex">
+                        <img src="<?php echo $information_speaker["image"]; ?>" alt="Photo of <?php echo $information_speaker["name"]; ?>">
+                    </div>
+                </div>
+
+                <div class="speaker-information">
+
+                    <div class="small-information">
+
+                        <?php if( isset($information_speaker['linkedin']) ): ?>
+                        <div class="linkedin">
+                            <i class="fa fa-linkedin-square" aria-hidden="true">
+                                <a target="_blank" href="<?php echo $information_speaker["linkedin"] ?>"></a>
+                            </i>
+                        </div>
+                        <?php endif; ?>
+
+                        <div>
+                            <p class="btn btn-regular all-caps"><?php echo $information_speaker["job"]; ?></p>
+                        </div>
+
+                    </div>
+
+                    <div class="large-information">
+                        <?php echo $information_speaker["description"]; ?>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+            <div class="more-speakers"> <!-- only visible when picture and description are next to each other -->
+
+                <h4>More speakers</h4>
+
+                <div class="speakers">
+
+                    <?php foreach ( $other_speakers as $speaker ): ?>
+
+                        <div class="carousel-item">
+                            <a href="speakers.php?q=<?php echo $speaker["q"]; ?>">
+                                <div class="bg-img bg-img-x flex">
+                                    <img src="<?php echo $speaker["image"]; ?>" alt="Photo of <?php echo $speaker["name"]; ?>">
+                                </div>
+                            </a>
+                        </div>
+
+                    <?php endforeach; ?>
+
+                </div>
+
+            </div>
 
         <?php endif; ?>
 
