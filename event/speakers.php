@@ -321,9 +321,12 @@
 
                         <?php if( isset($information_speaker['linkedin']) ): ?>
                         <div class="linkedin">
-                            <i class="fa fa-linkedin-square" aria-hidden="true">
-                                <a target="_blank" href="<?php echo $information_speaker["linkedin"] ?>"></a>
-                            </i>
+
+                                <a target="_blank" href="<?php echo $information_speaker["linkedin"] ?>">
+                                    <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+                                </a>
+
+
                         </div>
                         <?php endif; ?>
 
