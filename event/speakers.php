@@ -246,7 +246,7 @@
     </div>
 </nav>
 
-<section id="speaker">
+<section id="speaker" class="animated fadeInUp">
     <div class="maxwidth">
 
         <?php if( empty($_GET['q']) ): ?>
