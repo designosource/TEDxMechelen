@@ -16,7 +16,7 @@
             "name" => "Bram Vanderborght",
             "image" => "../img/hosts/Bram.png",
             "job" => "Professor robotics @ VUB",
-            "linkedin" => "http://www.linkedin/speaker",
+            "linkedin" => "https://www.linkedin.com/in/bramvanderborght/",
             "description" => "<p>Bram Vanderborght is an absolute authority in the field of robotics. The top researcher has a master’s degree in mechanical engineering at the Vrije University of Brussels (VUB) with the highest distinction, and received his doctorate in applied sciences in 2007.</p><p>Vanderborght conducted research at the Italian Institute of Technology in Genova, the Babes-Bolyai University Cluj-Napoca (Romania), and Japanese / French robo- tics laboratory in Tsukuba (Japan)</p>.
             <p>Recently, his research on self-healing robots are still getting attention in the national media. His research interests include cognitive and physical human robot interaction, robot-assisted therapy, humanoids and rehabilitation robotics such as exoskeletons.</p>",
         ),
@@ -25,7 +25,7 @@
             "name" => "Geert Vanwonterghem",
             "image" => "../img/hosts/Geert.png",
             "job" => "Founding partner @ MeetMatch",
-            /*"linkedin" => "http://www.linkedin/speaker",*/
+            "linkedin" => "https://www.linkedin.com/in/geertvanwonterghem/",
             "description" => "<p>He has been many things in his life: a fanatic software develo- per, an innovation manager, a professor, ... But first & fore- most, he is and will always be an entrepreneur. He loves everything about innovation, has done a lot of innovating him- self and has spent a lot of time sparring with people on how to organize innovation within their company.</p>
             <p>He also loves change projects. To guide people in new directi- ons and see it happen.</p>",
         ),
@@ -331,7 +331,7 @@
                         <?php endif; ?>
 
                         <div>
-                            <p class="btn btn-regular all-caps"><?php echo $information_speaker["job"]; ?></p>
+                            <p class="small-information-title btn "><?php echo $information_speaker["job"]; ?></p>
                         </div>
 
                     </div>

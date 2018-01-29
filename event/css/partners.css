@@ -27,8 +27,7 @@
       -webkit-transition: 0.5s;
       transition: 0.5s; }
     #partners .partnerscontainer .partneritem .partnerimage {
-      background-image: url("");
-      background-size: cover;
+      background-size: contain;
       background-position: center center;
       background-repeat: no-repeat;
       -webkit-filter: grayscale(0.5);
@@ -38,8 +37,9 @@
       width: 100px;
       height: 100px;
       margin-left: auto;
-      margin-right: auto;
-      background-color: red; }
+      margin-right: auto; }
+    #partners .partnerscontainer .partneritem .thomasmore {
+      background-image: url("../img/thomasmore.png"); }
     #partners .partnerscontainer .partneritem p {
       margin: 20px 0;
       text-align: center;
