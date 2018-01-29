@@ -46,20 +46,3 @@
 @media screen and (min-width: 1000px) {
   #partners .partnerscontainer .partneritem {
     flex-basis: calc(25% - 10px - 20px); } }
-      display: block;
-      text-align: center;
-      color: #e62b1e; }
-    #partners .partnerscontainer .partneritem i {
-      margin-top: 10px;
-      -webkit-transition: 0.5s;
-      transition: 0.5s; }
-
-@media screen and (min-width: 500px) {
-  #partners .partnerscontainer .partneritem {
-    -ms-flex-preferred-size: calc(50% - 10px - 20px);
-    flex-basis: calc(50% - 10px - 20px); } }
-
-@media screen and (min-width: 1000px) {
-  #partners .partnerscontainer .partneritem {
-    -ms-flex-preferred-size: calc(25% - 10px - 20px);
-    flex-basis: calc(25% - 10px - 20px); } }

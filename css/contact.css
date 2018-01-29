@@ -89,3 +89,34 @@
     #contact .flex .flex-element {
       -ms-flex-preferred-size: calc(50% - 20px);
       flex-basis: calc(50% - 20px); } }
+   #contact .flex form .flexrow .flex {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-bottom: 10px; }
+        #contact .flex form .flexrow .flex label {
+          margin-bottom: 10px;
+          color: #e62b1e; }
+        #contact .flex form .flexrow .flex input {
+          padding: 10px;
+          border: 1px solid #58595B; }
+    #contact .flex form .red {
+      color: #e62b1e; }
+    #contact .flex form .g-recaptcha {
+      margin-bottom: 20px; }
+    #contact .flex form .btn {
+      margin-left: 0; }
+
+@media screen and (min-width: 700px) {
+  #contact .flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    #contact .flex .flex-element {
+      -ms-flex-preferred-size: calc(50% - 20px);
+      flex-basis: calc(50% - 20px); } }
