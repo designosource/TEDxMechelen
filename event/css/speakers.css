@@ -1,3 +1,12 @@
+.role{
+  font-weight: bold;
+}
+
+.more-speakers h4{
+    font-weight: bold;
+    margin-left: 2em;
+}
+
 .speakers {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13,15 +22,30 @@
   .speakers .carousel-item {
     -ms-flex-preferred-size: calc(100% - 20px);
     flex-basis: calc(100% - 20px);
-    margin: 10px 0; }
+    margin: 10px 0;
+      padding-bottom: 50px;
+  }
+  .speakers .carousel-item .bg-img{
+    margin-bottom: 20px;
+  }
     .speakers .carousel-item p {
       margin-left: auto;
       margin-right: auto; }
+    .speakers .carousel-item .carousel-item-speaker{
+        margin-top: -10px;
+    }
+
+    @media screen and (max-width: 600px) {
+        .more-speakers{
+            display: none;
+        }
+    }
 
 @media screen and (min-width: 600px) {
   .speakers .carousel-item {
     -ms-flex-preferred-size: calc(50% - 20px);
-    flex-basis: calc(50% - 20px); } }
+    flex-basis: calc(50% - 20px); }
+}
 
 @media screen and (min-width: 1000px) {
   .speakers .carousel-item {
