@@ -1,0 +1,67 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Volunteer;
+use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
+
+class VolunteerController extends Controller
+{
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        return view('vrijwilliger.registreer');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $request->validate([
+            'organisator' => 'required|max:255',
+            'naam' => 'required|max:255',
+            'voornaam' => 'required|max:255',
+            'straat' => 'required|max:555',
+            'postcode' => 'required|max:6',
+            'gemeente' => 'required|max:255',
+            'g-recaptcha-response' => 'required|captcha',
+            'terms1' => 'required',
+            'terms2' => 'required',
+            'terms3' => 'required'
+        ]);
+
+        $volunteer = new Volunteer();
+        $volunteer->organisator = $request->organisator;
+        $volunteer->naam = $request->naam;
+        $volunteer->voornaam = $request->voornaam;
+        $volunteer->straat = $request->straat;
+        $volunteer->postcode = $request->postcode;
+        $volunteer->gemeente = $request->gemeente;
+        $volunteer->email = $request->email;
+        $volunteer->telefoon = $request->telefoon;
+        $volunteer->terms_accepted = 1;
+        $volunteer->save();
+
+        return redirect()->back()->with('success', 'true');
+    }
+
+    public function export() {
+
+        Excel::create('TEDx Mechelen', function($excel) {
+            $excel->sheet('Vrijwilligers', function($sheet) {
+                $volunteers = Volunteer::all();
+                $sheet->fromArray($volunteers);
+            });
+
+        })->download('csv');
+    }
+}
