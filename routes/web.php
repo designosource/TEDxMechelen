@@ -27,3 +27,6 @@ Route::get('/event/revolution', 'EventController@revolution');
 Route::get('/vrijwilliger/registreer', 'VolunteerController@create');
 Route::post('/vrijwilliger/registreer', 'VolunteerController@store');
 Route::get('/vrijwilliger/UvntFWAvF3r7ksst/export', 'VolunteerController@export');
+/**
+ *
+ */
