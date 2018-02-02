@@ -8,7 +8,7 @@
 
             <div class="teamMember">
                 <div class="introImg">
-                    <img src="../img/hosts/Wim.png" alt="Wim Soons">
+                    <img src="../img/hosts/Wim.png" alt="Wim Soons" class="flip">
                 </div>
                 <div class="introText">
                     <div class="introSmall">
@@ -60,7 +60,7 @@
 
         <div class="maxwidth teamMember">
             <div class="introImg">
-                <img src="../img/hosts/Steven.png" alt="Steven Dierckx">
+                <img src="../img/hosts/Steven.png" alt="Steven Dierckx" class="flip">
             </div>
             <div class="introText">
                 <div class="introSmall">
@@ -119,7 +119,7 @@
 
         <div class="maxwidth teamMember">
             <div class="introImg">
-                <img src="../img/hosts/Hans.png" alt="Hans Verbist">
+                <img src="../img/hosts/Hans.png" alt="Hans Verbist" class="flip">
             </div>
             <div class="introText">
                 <div class="introSmall">

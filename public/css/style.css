@@ -477,6 +477,11 @@ table {
       flex-basis: 45%;
 }
 
+img.flip {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
 .introText {
   padding-top: 30px;
   display: -webkit-box;
@@ -584,7 +589,7 @@ table {
 
   .teamMemberFlip {
     display: grid;
-    grid-template-columns: 1fr 33% !important;
+    grid-template-columns: 1fr 50% !important;
     grid-template-rows: none;
   }
 

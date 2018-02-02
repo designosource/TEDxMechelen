@@ -33,6 +33,10 @@
     flex-basis: 45%;
 }
 
+img.flip {
+    transform :scaleX(-1)
+}
+
 .introText{
     padding-top: 30px;
     display: flex;
@@ -120,7 +124,7 @@
 
     .teamMemberFlip{
         display: grid;
-        grid-template-columns: 1fr 33% !important;
+        grid-template-columns: 1fr 50% !important;
         grid-template-rows: none;
     }
 
