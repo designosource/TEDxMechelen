@@ -58,89 +58,27 @@
             <h3 class="title--line">Speakers + hosts</h3>
 
             <div class="carousel">
+                @foreach ( $speakers as $key => $speaker )
 
-                <div class="carousel-item">
-                    <div class="bg-img bg-img-x flex">
-                        <img src="img/hosts/Bram.png" alt="Photo of Bram Vanderborght">
+                    <div class="carousel-item">
+                        <div class="bg-img bg-img-x flex">
+                            <img src="{{ $speaker["image"] }}" alt="Photo of {{ $speaker["name"] }}">
+                        </div>
+                        <a href="event/speakers/{{ $key }}"
+                           class="btn btn-regular all-caps">{{ $speaker["name"] }}</a>
+                        <div class="carousel-item-speaker">
+                            <p class="quote"></p>
+                            <p class="role">{{ $speaker["job"] }}</p>
+                        </div>
+                        <a class="link--red" href="event/speakers/{{ $key }}">More
+                            about {{ $speaker["firstName"] }}<br><i class="fa fa-long-arrow-right"
+                                                               aria-hidden="true"></i></a>
                     </div>
-                    <a href="event/speakers.php?q=bram" class="btn btn-regular all-caps btn-size">Bram Vanderborght</a>
-                    <div class="carousel-item-speaker">
-                        <p class="quote"></p>
-                        <p class="role">Professor robotics @ VUB</p>
-                    </div>
-                    <a class="link--red" href="event/speakers.php?q=bram">More about Bram<br><i
-                                class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="bg-img bg-img-x">
-                        <img src="img/hosts/Rik.png" alt="Photo of Rik Vera">
-                    </div>
-                    <a href="event/speakers.php?q=rik" class="btn btn-regular all-caps btn-size">Rik Vera</a>
-                    <div class="carousel-item-speaker">
-                        <p class="quote"></p>
-                        <p class="role">CEO @ Nexxworks</p>
-                    </div>
-                    <a class="link--red" href="event/speakers.php?q=rik">More about Rik<br><i
-                                class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="bg-img bg-img-x">
-                        <img src="img/hosts/Nico.png" alt="Photo of Nico Huybrechts">
-                    </div>
-                    <a href="event/speakers.php?q=nico" class="btn btn-regular all-caps btn-size">Nico Huybrechts</a>
-                    <div class="carousel-item-speaker">
-                        <p class="quote"></p>
-                        <p class="role">CEO @ dataSHIFT</p>
-                    </div>
-                    <a class="link--red" href="event/speakers.php?q=nico">More about Nico<br><i
-                                class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="bg-img bg-img-x">
-                        <img src="img/hosts/Lidewij.png" alt="Photo of Lidewij Nuitten">
-                    </div>
-                    <a href="event/speakers.php?q=lidewij" class="btn btn-regular all-caps btn-size">Lidewij Nuitten</a>
-                    <div class="carousel-item-speaker">
-                        <p class="quote"></p>
-                        <p class="role">Televisiemaakster @ VRT</p>
-                    </div>
-                    <a class="link--red" href="event/speakers.php?q=lidewij">More about Lidewij<br><i
-                                class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="bg-img bg-img-x">
-                        <img src="img/hosts/Geert.png" alt="Photo of Geert Van Wonterghem">
-                    </div>
-                    <a href="event/speakers.php?q=geert" class="btn btn-regular all-caps btn-size">Geert Van
-                        Wonterghem</a>
-                    <div class="carousel-item-speaker">
-                        <p class="quote"></p>
-                        <p class="role">Founding Partner @ MeetMatch</p>
-                    </div>
-                    <a class="link--red" href="event/speakers.php?q=geert">More about Geert<br><i
-                                class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="bg-img bg-img-x">
-                        <img src="img/hosts/Nilesh.png" alt="Photo of Nilesh Madhu">
-                    </div>
-                    <a href="event/speakers.php?q=nilesh" class="btn btn-regular all-caps btn-size">Nilesh Madhu</a>
-                    <div class="carousel-item-speaker">
-                        <p class="quote"></p>
-                        <p class="role">Professor @ University Ghent</p>
-                    </div>
-                    <a class="link--red" href="event/speakers.php?q=nilesh">More about Nilesh<br><i
-                                class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                </div>
+                @endforeach
 
             </div>
 
-            <a href="event/speakers.php" class="meetspeakers btn btn-s all-caps">Meet the speakers</a>
+            <a href="event/speakers" class="meetspeakers btn btn-s all-caps">Meet the speakers</a>
 
 
         </div> <!-- end maxwidth -->

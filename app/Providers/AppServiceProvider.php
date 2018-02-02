@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\TEDxMechelen\Speakers;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +24,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+	    $this->app->singleton(Speakers::class, function(){
+		    return new Speakers();
+	    });
     }
 }

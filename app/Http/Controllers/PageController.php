@@ -2,10 +2,12 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\TEDxMechelen\Speakers;
 
 Class PageController extends Controller {
-    public function index() {
-        return view('index');
+    public function index(Speakers $speakersClass) {
+	    $speakers = $speakersClass->getSpeakers();
+        return view('index', compact('speakers'));
     }
     public function partners() {
         return view('partners');

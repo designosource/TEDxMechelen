@@ -21,12 +21,9 @@ Route::get('/about/team', 'AboutController@team');
 
 Route::get('/event/schedule', 'EventController@schedule');
 Route::get('/event/speakers', 'EventController@speakers');
-Route::get('/event/speaker/{name}', 'EventController@speaker');
+Route::get('/event/speakers/{name}', 'EventController@speaker');
 Route::get('/event/revolution', 'EventController@revolution');
 
 Route::get('/vrijwilliger/registreer', 'VolunteerController@create');
 Route::post('/vrijwilliger/registreer', 'VolunteerController@store');
 Route::get('/vrijwilliger/UvntFWAvF3r7ksst/export', 'VolunteerController@export');
-/**
- *
- */
