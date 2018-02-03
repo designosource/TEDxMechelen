@@ -1,0 +1,104 @@
+#Revolution .maxwidth p {
+  max-width: 1000px;
+}
+
+.timeline {
+  min-width: 400px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timeline .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.timeline .item .entry {
+  padding: 0 20px;
+  height: 4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.timeline .item .entry h4 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.timeline .item .information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.timeline .item .information .description p {
+  width: calc(100% - 60px);
+}
+
+.timeline .item .information:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 4px;
+  height: 100%;
+  left: -2px;
+  background-color: black;
+}
+
+.timeline .item .information .type {
+  margin-top: 0px;
+  margin-left: 0;
+  height: 4em;
+  padding: 0 20px;
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.timeline .item .information .type p {
+  margin-bottom: 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+.timeline .item .information .description {
+  margin-left: 20px;
+}
+
+@media screen and (min-width: 650px) {
+  .timeline .item .information {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
