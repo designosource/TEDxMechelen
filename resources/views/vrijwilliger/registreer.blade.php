@@ -48,10 +48,10 @@
                     <input type="checkbox" name="terms1" value="1"> De vrijwilliger ontvangt geen beloningvoor de door hem verrichte werkzaamheden.*
                 </div>
                 <div class="register">
-                    <input type="checkbox" name="terms2" value="1"> Uitkeringsgerechtigdevroegen schriftelijk toestemmingaan bij het werkloosheidsbureauvan de Rijksdienst voor arbeidsvoorziening (RVA) voor het uitvoeren vanvrijwilligerswerk.
+                    <input type="checkbox" name="terms2" value="1"> Uitkeringsgerechtigdevroegen schriftelijk toestemmingaan bij het werkloosheidsbureauvan de Rijksdienst voor arbeidsvoorziening (RVA) voor het uitvoeren vanvrijwilligerswerk.*
                 </div>
                 <div class="register">
-                    <input type="checkbox" name="terms3" value="1"> De organisatie heeft ten behoeve van de vrijwilliger de verzekering“Lichamelijke ongevallen”afgesloten. Deze zorgt voor tussenkomstin geval van lichamelijk letsel ten gevolge van een ongeval dat de vrijwilliger tijdens de werkzaamheden is overkomen.
+                    <input type="checkbox" name="terms3" value="1"> De organisatie heeft ten behoeve van de vrijwilliger de verzekering“Lichamelijke ongevallen”afgesloten. Deze zorgt voor tussenkomstin geval van lichamelijk letsel ten gevolge van een ongeval dat de vrijwilliger tijdens de werkzaamheden is overkomen.*
                 </div>
                 * = Verplichte velden / Gelezen en goedgekeurd
                 {!! app('captcha')->display() !!}
