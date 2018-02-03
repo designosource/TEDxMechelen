@@ -130,17 +130,17 @@
     <div class="maxwidth">
         <div class="splitline flex">
             <div>
-                <a href="comingSoon.html"><img id="footerlogo" src="/img/logo_w.png" alt="Logo TEDx Mechelen"></a>
+                <a href="/"><img id="footerlogo" src="/img/logo_w.png" alt="Logo TEDx Mechelen"></a>
             </div>
 
             <div>
                 <ul class="flex">
                     <li><a href="/">Home</a></li>
                     <li><a href="/about/tedx-and-ted">About</a></li>
-                    <li><a href="/event/schedule.html">Event</a></li>
-                    <li><a href="partners.html">Partners</a></li>
-                    <li><a href="joinus.html">Join us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="/event/schedule">Event</a></li>
+                    <li><a href="partners">Partners</a></li>
+                    <li><a href="/vrijwilliger/registreer">Join us</a></li>
+                    <li><a href="contact">Contact</a></li>
                 </ul>
             </div>
 
