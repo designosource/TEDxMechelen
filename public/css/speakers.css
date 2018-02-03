@@ -1,0 +1,109 @@
+.speakers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.speakers .carousel-item {
+  -ms-flex-preferred-size: calc(100% - 20px);
+  flex-basis: calc(100% - 20px);
+  margin: 10px 0;
+  padding-bottom: 50px;
+}
+
+.speakers .carousel-item .bg-img {
+  margin-bottom: 30px;
+}
+
+.speakers .carousel-item .carousel-item-speaker .role {
+  font-weight: bold;
+}
+
+.speakers .carousel-item p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.single-speaker {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.small-information-title {
+  color: white;
+  background-color: #e62b1e;
+  padding: 5px;
+  margin: 20px auto;
+  display: inline-block;
+}
+
+.more-speakers .speakers .carousel-item {
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+.more-speakers h4 {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  .single-speaker .speaker-information .small-information {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .more-speakers {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .speakers .carousel-item {
+    -ms-flex-preferred-size: calc(50% - 20px);
+    flex-basis: calc(50% - 20px);
+  }
+
+  .single-speaker .speaker-information .small-information {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .single-speaker .speaker-information .small-information .linkedin {
+    padding-left: 20px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .speakers .carousel-item {
+    -ms-flex-preferred-size: calc(33.33% - 20px);
+    flex-basis: calc(33.33% - 20px);
+  }
+}
+
