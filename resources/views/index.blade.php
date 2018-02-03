@@ -55,7 +55,7 @@
     <section id="speakers">
         <div class="maxwidth">
 
-            <h3 class="title--line">Speakers + hosts</h3>
+            <h3 class="title--line">Speakers</h3>
 
             <div class="carousel">
                 @foreach ( $speakers as $key => $speaker )
