@@ -67,7 +67,7 @@
                         <a href="event/speakers/{{ $key }}"
                            class="btn btn-regular all-caps">{{ $speaker["name"] }}</a>
                         <div class="carousel-item-speaker">
-                            <p class="quote"></p>
+                            <p class="quote">{{$speaker["quote"]}}</p>
                             <p class="role">{{ $speaker["job"] }}</p>
                         </div>
                         <a class="link--red" href="event/speakers/{{ $key }}">More

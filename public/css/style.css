@@ -39,6 +39,15 @@
   background-color: white;
 }
 
+.btn-submit {
+  border: none;
+  padding: 10px;
+}
+
+.btn-submit:hover {
+  border: 3px solid #e62b1e;
+}
+
 html,
 body,
 div,
@@ -1073,6 +1082,10 @@ body .bg-img {
 
 body .all-caps {
   text-transform: uppercase;
+}
+
+.register {
+  margin: 10px;
 }
 
 #ted .maxwidth a {
