@@ -13,9 +13,27 @@ class VolunteerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+        if ($request->cookie('secretAccess') != "secretCookieName")
+            return redirect('/vrijwilliger/validate');
+
         return view('vrijwilliger.registreer');
+    }
+
+    public function showPasswordField(Request $request) {
+        return view('password');
+    }
+
+    public function verifyPassword(Request $request) {
+        // cookie voor 60min
+        if ($request->password == "1234") {
+
+            $cookie = cookie('secretAccess', 'secretCookieName', 60);
+            return redirect('/vrijwilliger/registreer')->cookie($cookie);
+        } else {
+            return redirect('/vrijwilliger/validate');
+        }
     }
 
     /**
@@ -26,6 +44,9 @@ class VolunteerController extends Controller
      */
     public function store(Request $request)
     {
+        if ($request->cookie('secretAccess') != "secretCookieName")
+            return redirect('/vrijwilliger/validate');
+
         $request->validate([
             'organisator' => 'required|max:255',
             'naam' => 'required|max:255',
