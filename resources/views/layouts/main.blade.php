@@ -57,13 +57,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
 
     <!-- Reset css file -->
-    <link href="/css/reset.css" rel="stylesheet">
+    <link href="{{ asset("/css/reset.css")}}" rel="stylesheet">
 
     <!-- Animate.css -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/css/style.css" rel="stylesheet">
+    <link href="{{ asset("/css/style.css")}}" rel="stylesheet">
     <script src="https://use.fontawesome.com/f2a9d011c6.js"></script>
 
 </head>
@@ -176,9 +176,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="js/jquery.viewportchecker.js"></script>
-<script type="text/javascript" src="js/slick.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="{{ asset("/js/jquery.viewportchecker.js")}}"></script>
+<script type="text/javascript" src="{{ asset("/js/slick.js")}}"></script>
+<script type="text/javascript" src="{{ asset("/js/index.js")}}"></script>
 <!-- END SCRIPTS -->
 
 </body>

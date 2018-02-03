@@ -15,7 +15,7 @@
 
                         <div class="carousel-item">
                             <div class="bg-img bg-img-x flex">
-                                <img src="/{{ $speaker["image"] }}"
+                                <img src="{{ asset($speaker["image"])}}"
                                      alt="Photo of {{ $speaker["name"] }}">
                             </div>
                             <a href="{{ $key }}"
@@ -41,7 +41,7 @@
 
                     <div class="carousel-item">
                         <div class="bg-img bg-img-x flex">
-                            <img src="/{{ $information_speaker['image'] }}"
+                            <img src="{{ asset($information_speaker["image"])}}"
                                  alt="Photo of {{ $information_speaker['name'] }}">
                         </div>
                     </div>
@@ -86,7 +86,7 @@
                             <div class="carousel-item">
                                 <a href="/event/speakers/{{ $key }}">
                                     <div class="bg-img bg-img-x flex">
-                                        <img src="../{{ $speaker['image'] }}"
+                                        <img src="{{ asset($speaker["image"])}}"
                                              alt="Photo of {{ $speaker['name'] }}">
                                     </div>
                                 </a>

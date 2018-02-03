@@ -9,7 +9,7 @@
 
                     <div class="carousel-item">
                         <div class="bg-img bg-img-x flex">
-                            <img src="{{ $speaker["image"] }}" alt="Photo of {{ $speaker["name"] }}">
+                            <img src="{{ asset($speaker["image"])}}" alt="Photo of {{ $speaker["name"] }}">
                         </div>
                         <a href="speakers/{{ $key }}"
                            class="btn btn-regular all-caps">{{ $speaker["name"] }}</a>

@@ -8,7 +8,7 @@
 
             <div class="teamMember">
                 <div class="introImg">
-                    <img src="../img/hosts/Wim.png" alt="Wim Soons" class="flip">
+                    <img src="{{ asset("/img/hosts/Wim.png")}}" alt="Wim Soons" class="flip">
                 </div>
                 <div class="introText">
                     <div class="introSmall">
@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="introImg">
-                <img src="../img/hosts/Tom.png" alt="Tom Proost">
+                <img src="{{ asset("/img/hosts/Tom.png")}}" alt="Tom Proost">
             </div>
             <div class="introBig">
                 <p>Tom Proost has been passionate about music, sound and technology ever since he was a child.
@@ -60,7 +60,7 @@
 
         <div class="maxwidth teamMember">
             <div class="introImg">
-                <img src="../img/hosts/Steven.png" alt="Steven Dierckx" class="flip">
+                <img src="{{ asset("/img/hosts/Steven.png")}}" alt="Steven Dierckx" class="flip">
             </div>
             <div class="introText">
                 <div class="introSmall">
@@ -100,7 +100,7 @@
                 </div>
             </div>
             <div class="introImg">
-                <img src="../img/hosts/Chris.png" alt="Chris Beuckeleers">
+                <img src="{{ asset("/img/hosts/Chris.png")}}" alt="Chris Beuckeleers">
             </div>
             <div class="introBig">
                 <p>
@@ -119,7 +119,7 @@
 
         <div class="maxwidth teamMember">
             <div class="introImg">
-                <img src="../img/hosts/Hans.png" alt="Hans Verbist" class="flip">
+                <img src="{{ asset("/img/hosts/Hans.png")}}" alt="Hans Verbist" class="flip">
             </div>
             <div class="introText">
                 <div class="introSmall">
