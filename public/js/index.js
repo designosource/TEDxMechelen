@@ -1,7 +1,7 @@
 $(document).ready(function(){
     
     // scroll naar de div die in de link staat, indien deze naar dezelfde verwijst
-    $(function() { 
+    $(function() {
         $('body a').click(function() {
             
             if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -14,7 +14,7 @@ $(document).ready(function(){
             } 
         });
         
-    });        
+    });
     
     $('.carousel').slick({
     slidesToShow: 3,
@@ -60,7 +60,7 @@ $(document).ready(function(){
         navigation();
     });
     
-    $(".dropdown").on('click', function(e){
+    $(".dropdown").on('hover', function(e){
         $(".dropdown").toggleClass("dropped");
         
         if($(".dropdown").hasClass("dropped")) {
