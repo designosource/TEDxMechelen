@@ -123,8 +123,9 @@
         </ul>
     </div>
 </nav>
-
+<section id="wrapper">
 @yield('content')
+</section>
 
 <footer>
     <div class="maxwidth">

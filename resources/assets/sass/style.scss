@@ -16,6 +16,7 @@ body{
     color: $color--black;
     font-family: Helvetica, sans-serif;
     overflow-x: hidden;
+    height:100%;
     
     a {
         text-decoration: none;
@@ -45,6 +46,12 @@ body{
     .all-caps {
         text-transform: uppercase;
     }
+}
+
+#wrapper{
+    min-height: 60vh;
+    width: 100%;
+    padding: 0;
 }
 
 .register{
@@ -548,6 +555,7 @@ section {
 footer {
     background-color: $color--gray;
     color: $color--white;
+
     
     .maxwidth {
         width: 90%;

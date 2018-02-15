@@ -1050,6 +1050,7 @@ body {
   color: #000000;
   font-family: Helvetica, sans-serif;
   overflow-x: hidden;
+  height: 100%;
 }
 
 body a {
@@ -1082,6 +1083,12 @@ body .bg-img {
 
 body .all-caps {
   text-transform: uppercase;
+}
+
+#wrapper {
+  min-height: 60vh;
+  width: 100%;
+  padding: 0;
 }
 
 .register {
