@@ -128,7 +128,7 @@
                     </div>
                     <div class="introSmallTitle">
                         <p class="teamTitle">IT & Volunteers</p>
-                        <p class="teamMails">Hans@tedxmechelen.be</p>
+                        <p class="teamMails">Hans@te/dxmechelen.be</p>
                     </div>
                 </div>
             </div>

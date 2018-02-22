@@ -18,7 +18,7 @@
             @if (session('success'))
                 <h1>Bedankt voor uw registratie</h1>
             @endif
-            <form action="{{ url('vrijwilliger/registreer') }}" style="height: auto;" method="POST">
+            <form action="{{ url('/vrijwilliger/registreer') }}" style="height: auto;" method="POST">
                 {{ csrf_field() }}
                 <div class="register">
                     <input type="text" name="organisator" placeholder="Via organisator*">

@@ -84,7 +84,7 @@
                         @foreach($other_speakers as $key => $speaker)
 
                             <div class="carousel-item">
-                                <a href="/event/speakers/{{ $key }}">
+                                <a href="{{ url('/event/speakers/').$key }}">
                                     <div class="bg-img bg-img-x flex">
                                         <img src="{{ asset($speaker["image"])}}"
                                              alt="Photo of {{ $speaker['name'] }}">

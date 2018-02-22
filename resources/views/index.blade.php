@@ -5,7 +5,7 @@
         <div class="maxwidth flex">
 
             <div id="jumbotron" class="bg-img flex animated fadeInUp">
-                <img src="img/header.svg" alt="TEDx Mechelen">
+                <img src="{{ asset('/img/header.svg') }}" alt="TEDx Mechelen">
                 <h1 class="h1--underline all-caps">Revolution</h1>
                 <h1>23 maart 2018</h1>
 
@@ -27,7 +27,7 @@
                 speakers will spark deep discussion and connection. The TED Conference provides general guidance for the
                 TEDx program, but individual TEDx events are self-organised.</p>
 
-            <a class="link--red" href="about/tedxandted.html">Learn more about TEDx</a>
+            <a class="link--red" href="{{ url('/about/tedx-and-ted') }}">Learn more about TEDx</a>
 
 
         </div> <!-- end maxwidth -->
@@ -64,13 +64,13 @@
                         <div class="bg-img bg-img-x flex">
                             <img src="{{ asset($speaker["image"])}}" alt="Photo of {{ $speaker["name"] }}">
                         </div>
-                        <a href="event/speakers/{{ $key }}"
+                        <a href="{{ url('/event/speakers/').$key }}"
                            class="btn btn-regular all-caps">{{ $speaker["name"] }}</a>
                         <div class="carousel-item-speaker">
                             <p class="quote">{{$speaker["quote"]}}</p>
                             <p class="role">{{ $speaker["job"] }}</p>
                         </div>
-                        <a class="link--red" href="event/speakers/{{ $key }}">More
+                        <a class="link--red" href="{{ url('/event/speakers/').$key }}">More
                             about {{ $speaker["firstName"] }}<br><i class="fa fa-long-arrow-right"
                                                                aria-hidden="true"></i></a>
                     </div>
@@ -78,7 +78,7 @@
 
             </div>
 
-            <a href="event/speakers" class="meetspeakers btn btn-s all-caps">Meet the speakers</a>
+            <a href="{{ url('/event/speakers') }}" class="meetspeakers btn btn-s all-caps">Meet the speakers</a>
 
 
         </div> <!-- end maxwidth -->
