@@ -1458,8 +1458,7 @@ header .flex {
 
 header .flex #jumbotron {
   background-image: url(/images/red_x.svg?3405c9f27fa22fe73351b2039e718db3);
-  background-size: cover;
-  padding: 40px 0;
+  background-size: contain;
   min-width: 500px;
   width: 80%;
   max-width: 800px;
