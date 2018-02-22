@@ -6,7 +6,7 @@
 
     <!-- END GOOGLE ANALYTICS SCRIPT -->
 
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/img/favicon.ico') }}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="TEDx Mechelen is an independently organized TED event about revolution. This event will be hosted at the Creativity Gym at Thomas More Mechelen on the 23th of March 2018.">
@@ -57,21 +57,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
 
     <!-- Reset css file -->
-    <link href="css/reset.css" rel="stylesheet">
-    <link href="../css/reset.css" rel="stylesheet">
+    <link href="{{ asset('/css/reset.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/reset.css') }}" rel="stylesheet">
 
     <!-- Animate.css -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
-    <link href="../css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/contact.css">
-    <link rel="stylesheet" href="../css/event.css">
-    <link rel="stylesheet" href="css/joinus.css">
-    <link rel="stylesheet" href="css/partners.css">
-    <link rel="stylesheet" href="../css/speakers.css">
-    <link rel="stylesheet" href="../css/team.css">
+    <link rel="stylesheet" href="{{ asset('/css/contact.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/event.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/joinus.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/partners.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/speakers.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/team.css') }}">
     <script src="https://use.fontawesome.com/f2a9d011c6.js"></script>
 
 </head>
@@ -99,7 +98,7 @@
 
 <nav>
     <div class="maxwidth flex">
-        <a href="../index"><img id="logo" class="animated fadeInLeft" src="../img/logo.png" alt="Logo TEDx Mechelen"/></a>
+        <a href="{{ url('/') }}"><img id="logo" class="animated fadeInLeft" src="{{ asset('/img/logo.png') }}" alt="Logo TEDx Mechelen"/></a>
 
         <div class="hamburger-menu-container">
             <div class="hamburger-menu animated fadeInRight">
@@ -110,24 +109,24 @@
         </div>
 
         <ul class="navigation flex">
-            <li><a href="../index">Home</a></li>
+            <li><a href="{{ url('/') }}">Home</a></li>
             <li>
                 <a href="#" class="dropdown">About</a>
                 <ul class="drop">
-                    <li><a href="../about/tedx-and-ted">TEDx &amp; TED</a></li>
-                    <li><a href="../about/team">Team</a></li>
+                    <li><a href="{{ url('/about/tedx-and-ted') }}">TEDx &amp; TED</a></li>
+                    <li><a href="{{ url('/about/team') }}">Team</a></li>
                 </ul>
             </li>
             <li>
                 <a href="#" class="dropdown">Event</a>
                 <ul class="drop">
-                    <li><a href="schedule">Schedule</a></li>
-                    <li><a href="speakers">Speakers</a></li>
-                    <li><a href="revolution">Revolution</a></li>
+                    <li><a href="{{ url('/event/schedule') }}">Schedule</a></li>
+                    <li><a href="{{ url('/event/speakers') }}">Speakers</a></li>
+                    <li><a href="{{ url('/event/revolution') }}">Revolution</a></li>
                 </ul>
             </li>
-            <li><a href="../partners">Partners</a></li>
-            <li><a href="../contact">Contact</a></li>
+            <li><a href="{{ url('/partners') }}">Partners</a></li>
+            <li><a href="{{ url('/contact') }}">Contact</a></li>
         </ul>
     </div>
 </nav>
@@ -138,17 +137,17 @@
     <div class="maxwidth">
         <div class="splitline flex">
             <div>
-                <a href="../index"><img id="footerlogo" src="../img/logo_w.png" alt="Logo TEDx Mechelen"></a>
+                <a href="{{ url('/') }}"><img id="footerlogo" src="{{ asset('/img/logo_w.png') }}" alt="Logo TEDx Mechelen"></a>
             </div>
 
             <div>
                 <ul class="flex">
-                    <li><a href="../index">Home</a></li>
-                    <li><a href="../about/tedx-and-ted">About</a></li>
-                    <li><a href="schedule.html">Event</a></li>
-                    <li><a href="../partners.html">Partners</a></li>
-                    <li><a href="../joinus.html">Join us</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="{{ url('/') }}">Home</a></li>
+                    <li><a href="{{ url('/about/tedx-and-ted') }}">About</a></li>
+                    <li><a href="{{ url('/event/schedule') }}">Event</a></li>
+                    <li><a href="{{ url('/partners') }}">Partners</a></li>
+                    <li><a href="{{ url('/vrijwilliger/registreer') }}">Join us</a></li>
+                    <li><a href="{{ url('/contact') }}">Contact</a></li>
                 </ul>
             </div>
 
@@ -184,9 +183,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="js/jquery.viewportchecker.js"></script>
-<script type="text/javascript" src="js/slick.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="{{ asset('/js/jquery.viewportchecker.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/js/slick.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/js/index.js') }}"></script>
 <!-- END SCRIPTS -->
 
 </body>

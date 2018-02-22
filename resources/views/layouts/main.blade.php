@@ -6,7 +6,7 @@
 
     <!-- END GOOGLE ANALYTICS SCRIPT -->
 
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/img/favicon.ico') }}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="TEDx Mechelen is an independently organized TED event about revolution. This event will be hosted at the Creativity Gym at Thomas More Mechelen on the 23th of March 2018.">
@@ -91,7 +91,7 @@
 
 <nav>
     <div class="maxwidth flex">
-        <a href="/"><img id="logo" class="animated fadeInLeft" src="/img/logo.png" alt="Logo TEDx Mechelen"/></a>
+        <a href="{{ url('/') }}"><img id="logo" class="animated fadeInLeft" src="{{ asset('/img/logo.png') }}" alt="Logo TEDx Mechelen"/></a>
 
         <div class="hamburger-menu-container">
             <div class="hamburger-menu animated fadeInRight">
@@ -102,24 +102,24 @@
         </div>
 
         <ul class="navigation flex">
-            <li><a href="/">Home</a></li>
+            <li><a href="{{ url('/') }}/">Home</a></li>
             <li>
                 <a href="#" class="dropdown">About</a>
                 <ul class="drop">
-                    <li><a href="/about/tedx-and-ted">TEDx &amp; TED</a></li>
-                    <li><a href="/about/team">Team</a></li>
+                    <li><a href="{{ url('/about/tedx-and-ted') }}">TEDx &amp; TED</a></li>
+                    <li><a href="{{ url('/about/team') }}">Team</a></li>
                 </ul>
             </li>
             <li>
                 <a href="#" class="dropdown">Event</a>
                 <ul class="drop">
-                    <li><a href="/event/schedule">Schedule</a></li>
-                    <li><a href="/event/speakers">Speakers</a></li>
-                    <li><a href="/event/revolution">Revolution</a></li>
+                    <li><a href="{{ url('/event/schedule') }}">Schedule</a></li>
+                    <li><a href="{{ url('/event/speakers') }}">Speakers</a></li>
+                    <li><a href="{{ url('/event/revolution') }}">Revolution</a></li>
                 </ul>
             </li>
-            <li><a href="/partners">Partners</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="{{ url('/partners') }}">Partners</a></li>
+            <li><a href="{{ url('/contact') }}">Contact</a></li>
         </ul>
     </div>
 </nav>
@@ -131,17 +131,17 @@
     <div class="maxwidth">
         <div class="splitline flex">
             <div>
-                <a href="/"><img id="footerlogo" src="/img/logo_w.png" alt="Logo TEDx Mechelen"></a>
+                <a href="{{ url('/about/tedx-and-ted') }}/"><img id="footerlogo" src="{{ asset("/img/logo_w.png")}}" alt="Logo TEDx Mechelen"></a>
             </div>
 
             <div>
                 <ul class="flex">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about/tedx-and-ted">About</a></li>
-                    <li><a href="/event/schedule">Event</a></li>
-                    <li><a href="partners">Partners</a></li>
-                    <li><a href="/vrijwilliger/registreer">Join us</a></li>
-                    <li><a href="contact">Contact</a></li>
+                    <li><a href="{{ url('/') }}">Home</a></li>
+                    <li><a href="{{ url('/about/tedx-and-ted') }}">About</a></li>
+                    <li><a href="{{ url('/event/schedule') }}">Event</a></li>
+                    <li><a href="{{ url('/partners') }}">Partners</a></li>
+                    <li><a href="{{ url('/vrijwilliger/registreer') }}">Join us</a></li>
+                    <li><a href="{{ url('/contact') }}">Contact</a></li>
                 </ul>
             </div>
 
