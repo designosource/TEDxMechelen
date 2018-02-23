@@ -27,7 +27,7 @@ class VolunteerController extends Controller
 
     public function verifyPassword(Request $request) {
         // cookie voor 60min
-        if ($request->password == "1234") {
+        if ($request->password == "R3gistratie2018") {
 
             $cookie = cookie('secretAccess', 'secretCookieName', 60);
             return redirect('/vrijwilliger/registreer')->cookie($cookie);
