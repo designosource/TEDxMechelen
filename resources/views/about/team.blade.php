@@ -133,16 +133,7 @@
                 </div>
             </div>
             <div class="introBig">
-                <p>Hans Verbist started as a graduate in Informatica in education,
-                    responsible for the management and expansion of the IT infrastructure
-                    for a large number of Mechelen schools. After more than
-                    12 years of experience in this sector, his interest within the IT
-                    sector turned mainly to IT security. Here he has also adjusted his
-                    professional goals and exchanged his previous job for that of
-                    cyber security expert. In addition, Hans is organizing the National
-                    Children’s Cancer Day for which he has been committed for years
-                    without any interest. His knowledge of event management is an
-                    important link where he can provide added value for TEDxMechelen.</p>
+                <p>Hans Verbist graduated in computer science and started working in education, responsible for the management and expansion of the IT infrastructure for a large number of schools in Mechelen. After more than 12 years of experience in this field, his interest within the IT sector turned mainly to IT security. Here he has also adjusted his professional goals and exchanged his previous job for that of cyber security expert. In addition, Hans is the co-organizer of "Nationale Kinderkankerdag" (National Children’s Cancer Day) for which he has been committed for years. His knowledge of event management is an important link where he can provide added value for TEDxMechelen.</p>
             </div>
         </div>
     </section>
