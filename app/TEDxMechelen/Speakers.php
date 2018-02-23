@@ -22,8 +22,7 @@ class Speakers {
 				"quote" => "Revolutionary way to Network via Technology",
 				"job" => "Founding partner @ MeetMatch",
 				"linkedin" => "https://www.linkedin.com/in/geertvanwonterghem/",
-				"description" => "<p>He has been many things in his life: a fanatic software develo- per, an innovation manager, a professor, ... But first & fore- most, he is and will always be an entrepreneur. He loves everything about innovation, has done a lot of innovating him- self and has spent a lot of time sparring with people on how to organize innovation within their company.</p>
-            <p>He also loves change projects. To guide people in new directi- ons and see it happen.</p>",
+				"description" => "<p>Geert has been many things in his life: a fanatic software developer, an innovation manager, a professor,... But first & fore-most, he is and will always be an entrepreneur. He loves everything about innovation, has done a lot of innovating himself and has spent a lot of time sparring with people on how to organize innovation within their company.</p><p>He also loves Change Projects: to guide people in new directions and see a transformation take place.</p>",
 			),
 			"lidewij" => array(
 				"firstName" => "Lidewij",
@@ -32,8 +31,7 @@ class Speakers {
 				"quote" => "Revolution in Reporting",
 				"job" => "Televisiemaakster @ VRT",
 				"linkedin" => "https://www.linkedin.com/in/lidewij-nuitten-0681a546/",
-				"description" => "<p>Lidewij Nuitten is a television maker, who is the past couple of years made numerous amount of very intriguing series. Nuitten studied journalism at the Erasmushogeschool Brussel, and did an internship at Brussels Week. Then she went to work for the VRT, and she made the now famous reporter series ‘Iedereen Beroemd’. ‘Always straight’ - in which she walked in a straight line from Limburg until the coast - and ‘De Laatstejaars’.</p>
-            <p>Her most recent work is ‘My Street’. Setup of this project was to interview as many of the people as possible in her very diverse street in Schaarbeek. Armed with 2 cameras she was able to capture the most fantastic stories.</p>",
+				"description" => "<p>Lidewij Nuitten is a Belgian television maker who made numerous amount of very intriguing series during the past couple of years. Nuitten studied journalism at the Erasmushogeschool Brussel and started her career at VRT where she made the now famous reporter series ‘Iedereen Beroemd’, ‘Altijd rechtdoor’ - in which she walked in a straight line from Limburg until the Belgian coast line - and ‘De Laatstejaars’</p><p>Her most recent work is ‘My Street’. Setup of this project was to interview as many of the people as possible in her very diverse street in Schaarbeek. Armed with 2 cameras she was able to capture the most fantastic stories</p>",
 			),
 			"nilesh" => array(
 				"firstName" => "Nilesh",
@@ -43,7 +41,7 @@ class Speakers {
 				"job" => "Professor @ University Ghent",
 				/*"linkedin" => "http://www.linkedin/speaker",*/
 				"description" => "<p>Nilesh Madhu is a researcher dedicated to speech technology and sound processing.</p>
-            <p>He is an engineer from training and a professor at the University from Ghent.</p>",
+            <p>He is an engineer, who teaches at the University of Ghent</p>",
 			),
 			"rik" => array(
 				"firstName" => "Rik",
