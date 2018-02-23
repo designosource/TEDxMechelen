@@ -52,8 +52,8 @@ class Speakers {
                 "quote" => "Managers the Day After Tomorrow",
 				"job" => "CEO @ Nexxworx",
 				"linkedin" => "https://www.linkedin.com/in/rikvera/",
-				"description" => "<p>Having gathered years of C-level experience in sales and marketing related functions, he now inspires companies to develop customer-centric strategies fit for a connected world. Rik has given more than 350 keynote sessions around the world, in more than 15 countries, divided over 3 continents, to international pioneers like Assa Abloy, Cisco, Volvo, Swedbank, Telia, Baloise, Mastercard, Mundiphar- ma, Sogeti and Microsoft.</p>
-            <p>He is a renowned thought-leader, worldwide keynote spea- ker, acclaimed author and trusted advisor on the topics of extreme customer-centricity, disruption, business model change, sales, marketing and making companies ready for the Day After Tomorrow.</p>",
+				"description" => "<p>Having gathered years of C-level experience in sales and marketing related functions, he now inspires companies to develop customer-centric strategies fit for a connected world. Rik has given more than 350 keynote sessions around the world, in more than 15 countries, divided over 3 continents, to international pioneers like Assa Abloy, Cisco, Volvo, Swedbank, Telia, Baloise, Mastercard, Mundipharma, Sogeti and Microsoft.</p>
+            <p>He is a renowned thought-leader, worldwide keynote speaker, acclaimed author and trusted advisor on the topics of extreme customer-centricity, disruption, business model change, sales, marketing and making companies ready for the Day After Tomorrow.</p>",
 			),
 			"nico" => array(
 				"firstName" => "Nico",
