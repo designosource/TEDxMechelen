@@ -30,7 +30,7 @@
 
                         <!--<div class="g-recaptcha" data-sitekey="6Lcjf0IUAAAAACt1vu_bVH3BGt1R8Y3vs8vxaYZA"></div>-->
 
-                        <input type="submit" class="all-caps btn btn-s" value="Send">
+                        <input type="submit" class="meetspeakers btn btn-s all-caps" value="Send">
 
                     </form>
                 </div>
