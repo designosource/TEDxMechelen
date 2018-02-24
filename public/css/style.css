@@ -1312,14 +1312,14 @@ nav .maxwidth .navigation li a:hover:after {
 }
 
 nav .maxwidth .navigation li .dropdown {
-  background-image: url(/images/down-arrow.svg?856b4292c743dd58ddef928f047da847);
+  background-image: url(/fonts/down-arrow.svg?0128d76edb512e53d6d2d62d1c617d3f);
   background-repeat: no-repeat;
   background-size: 20px 20px;
   background-position: calc(100% - 20px) center;
 }
 
 nav .maxwidth .navigation li .dropped {
-  background-image: url(/images/up-arrow.svg?d59997c07592601bd7b4fe897eedfde5);
+  background-image: url(/fonts/up-arrow.svg?6e0b4dbff7865acef7975a4fc814ef79);
 }
 
 nav .maxwidth .navigation li .drop {
@@ -1375,7 +1375,7 @@ nav .maxwidth .navigation li .drop li {
   }
 
   .carousel .bg-img-x {
-    background-image: url(/images/red_x.svg?3405c9f27fa22fe73351b2039e718db3);
+    background-image: url(/fonts/red_x.svg?bdce29629f735d80e04df9a403c41265);
     background-repeat: no-repeat;
     background-size: contain !important;
     height: 250px;
@@ -1407,7 +1407,7 @@ nav .maxwidth .navigation li .drop li {
 }
 
 .bg-img-x {
-  background-image: url(/images/red_x.svg?3405c9f27fa22fe73351b2039e718db3);
+  background-image: url(/fonts/red_x.svg?bdce29629f735d80e04df9a403c41265);
   background-repeat: no-repeat;
   background-size: contain !important;
   height: 250px;
@@ -1457,13 +1457,25 @@ header .flex {
 }
 
 header .flex #jumbotron {
-  background-image: url(/images/red_x.svg?3405c9f27fa22fe73351b2039e718db3);
-  background-size: contain;
+  background-image: url(/fonts/red_x.svg?bdce29629f735d80e04df9a403c41265);
+  background-size: cover;
+  padding: 40px 0;
   min-width: 500px;
   width: 80%;
   max-width: 800px;
   margin: 100px auto;
   color: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
 }
 
 header .flex #jumbotron img {
@@ -1553,7 +1565,7 @@ section .carousel .carousel-item {
 }
 
 section .carousel .carousel-item .bg-img-x {
-  background-image: url(/images/red_x.svg?3405c9f27fa22fe73351b2039e718db3);
+  background-image: url(/fonts/red_x.svg?bdce29629f735d80e04df9a403c41265);
   height: 300px;
   overflow: hidden;
   display: -webkit-box;
@@ -1601,6 +1613,7 @@ section .meetspeakers {
   margin: 10px auto;
   margin-top: 107px;
   text-align: center;
+  font-size: 16px;
   border: 5px solid #000000;
 }
 
@@ -1832,7 +1845,7 @@ footer .copyright p a:hover {
     left: 0%;
   }
 
-  nav .maxwidth .navigation li .drop {
+  nav .maxwidth .navigation li #about .drop {
     position: absolute;
     top: 56px;
     display: none;

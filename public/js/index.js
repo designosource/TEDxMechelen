@@ -1,7 +1,7 @@
 $(document).ready(function(){
     
     // scroll naar de div die in de link staat, indien deze naar dezelfde verwijst
-    $(function() {
+    /*$(function() {
         $('body a').click(function() {
             
             if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -14,7 +14,7 @@ $(document).ready(function(){
             } 
         });
         
-    });
+    });*/
     
     $('.carousel').slick({
     slidesToShow: 3,
@@ -59,24 +59,27 @@ $(document).ready(function(){
         checkhamburgermenu();
         navigation();
     });
-    
-    $(".dropdown").on('hover', function(e){
-        $(".dropdown").toggleClass("dropped");
-        
-        if($(".dropdown").hasClass("dropped")) {
+
+
+    $('.dropdown').on('hover', function(e){
+        $('.dropdown').toggleClass("dropped");
+
+        if($('.dropdown').hasClass("dropped")) {
             $('.drop').slideDown();
         } else {
             $('.drop').slideUp();
         }
-        
+
     });
+
     
     function checkhamburgermenu() {
         // breakpoint bereikt?
-        
+
         // JA
-        if( $(window).width() > 850 ) {
-            
+        if (window.matchMedia('(min-width: 850px)').matches){
+
+
             // remove class 'open' from hamburger-menu
             if( $(".hamburger-menu").hasClass('open') ){
                 
@@ -93,7 +96,30 @@ $(document).ready(function(){
             
         // NEE
         } else {
-            
+
+           /* alert('hi');
+            $('#about').on('click', function(){
+
+                $(this).toggleClass("dropped");
+
+                if($(this).hasClass("dropped")) {
+                    $('#aboutul.drop').slideDown();
+                } else {
+                    $('#aboutul.drop').slideUp();
+                }
+            });
+
+            $('#event').on('click', function(){
+                $(this).toggleClass("dropped");
+
+                if($(this).hasClass("dropped")) {
+                    $('#eventul.drop').slideDown();
+                } else {
+                    $('#eventul.drop').slideUp();
+                }
+            });*/
+
+
             // hamburger menu moet er staan!
             $(".hamburger-menu").css('display', 'block');
             

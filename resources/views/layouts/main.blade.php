@@ -104,15 +104,15 @@
         <ul class="navigation flex">
             <li><a href="{{ url('/') }}/">Home</a></li>
             <li>
-                <a href="#" class="dropdown">About</a>
-                <ul class="drop">
+                <a href="#" class="dropdown" >About</a>
+                <ul class="drop" >
                     <li><a href="{{ url('/about/tedx-and-ted') }}">TEDx &amp; TED</a></li>
                     <li><a href="{{ url('/about/team') }}">Team</a></li>
                 </ul>
             </li>
             <li>
-                <a href="#" class="dropdown">Event</a>
-                <ul class="drop">
+                <a href="#" class="dropdown" >Event</a>
+                <ul class="drop" >
                     <li><a href="{{ url('/event/schedule') }}">Schedule</a></li>
                     <li><a href="{{ url('/event/speakers') }}">Speakers</a></li>
                     <li><a href="{{ url('/event/revolution') }}">Revolution</a></li>
