@@ -43,7 +43,7 @@
             <form action="https://formspree.io/info@tedxmechelen.be"
                   method="POST" target="_blank" class="flex">
 
-                <input type="email" name="email" placeholder="Email">
+                <input type="email" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
 
                 <input class="btn btn-s all-caps" type="submit" value="Subscribe">
 
