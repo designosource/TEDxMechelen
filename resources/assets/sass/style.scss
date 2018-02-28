@@ -12,6 +12,10 @@
 
 // IMPLEMENT SASS
 
+html {
+    overflow-x: hidden;
+}
+
 body{
     color: $color--black;
     font-family: Helvetica, sans-serif;
