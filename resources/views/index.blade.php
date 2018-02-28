@@ -41,7 +41,7 @@
             <p>Keep up with our latest news about TEDxMechelen</p>
 
             <form action="https://formspree.io/info@tedxmechelen.be"
-                  method="POST" target="_blank" class="flex">
+                  method="POST" target="_blank" class="flex form-flex">
 
                 <input type="email" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
 
