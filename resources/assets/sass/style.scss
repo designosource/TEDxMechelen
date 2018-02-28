@@ -18,6 +18,12 @@ body{
     overflow-x: hidden;
     height:100%;
     
+    input[type="submit"], button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    
     a {
         text-decoration: none;
         color: inherit;
