@@ -1046,11 +1046,22 @@ img.flip {
   }
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   color: #000000;
   font-family: Helvetica, sans-serif;
   overflow-x: hidden;
   height: 100%;
+}
+
+body input[type="submit"],
+body button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 body a {
@@ -1845,7 +1856,7 @@ footer .copyright p a:hover {
     left: 0%;
   }
 
-  nav .maxwidth .navigation li #about .drop {
+  nav .maxwidth .navigation li .drop {
     position: absolute;
     top: 56px;
     display: none;
@@ -1898,6 +1909,18 @@ footer .copyright p a:hover {
 
   nav .maxwidth .navigation li a:hover + .drop {
     display: block !important;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .form-flex {
+    margin-bottom: 10px;
+  }
+
+  .form-flex input {
+    display: block;
+    width: 100% !important;
+    margin: 0 !important;
   }
 }
 

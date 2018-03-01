@@ -97,9 +97,7 @@ $(document).ready(function(){
         // NEE
         } else {
 
-           /* alert('hi');
             $('#about').on('click', function(){
-
                 $(this).toggleClass("dropped");
 
                 if($(this).hasClass("dropped")) {
@@ -117,7 +115,7 @@ $(document).ready(function(){
                 } else {
                     $('#eventul.drop').slideUp();
                 }
-            });*/
+            });
 
 
             // hamburger menu moet er staan!
