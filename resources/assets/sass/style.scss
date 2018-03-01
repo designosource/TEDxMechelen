@@ -22,10 +22,11 @@ body{
     overflow-x: hidden;
     height:100%;
     
-    input[type="submit"], button {
+    input, button {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
+        border-radius: 0;
     }
     
     a {

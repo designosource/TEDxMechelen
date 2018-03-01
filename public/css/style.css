@@ -1057,11 +1057,14 @@ body {
   height: 100%;
 }
 
-body input[type="submit"],
+body input,
 body button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 
 body a {
